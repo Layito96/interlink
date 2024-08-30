@@ -6,13 +6,43 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+    fontFamily: {
+      primary: "Tajawal",
+      secondary: "Jost",
+      slogan: "JetBrains Mono",
     },
+
+    extend: {
+      // cursor: {
+      //   default: 'url(/images/cursor.png), default',
+      // },
+      inset: {
+        100: "100%",
+      },
+      colors: {
+        primary: {
+          DEFAULT: " #14315b",
+          hover: "#E4A31B",
+        },
+        secondary: {
+          DEFAULT: "#111827",
+          hover: "#1F2937",
+        },
+        accent: {
+          // DEFAULT: '#c5c7c8',
+          DEFAULT: "#dbeafe",
+          // DEFAULT: '#1e7bb2',
+          secondary: "#f4f0ec",
+          tertiary: "#E6F0FF",
+          // hover: '#b88c5d',
+          hover: "#4b62b3",
+        },
+      },
+      display: ["responsive", "group-hover", "group-focus"], // Ensure necessary variants are enabled
+    },
+  },
+  variants: {
+    width: ["responsive", "hover", "focus"],
   },
   plugins: [],
 };
