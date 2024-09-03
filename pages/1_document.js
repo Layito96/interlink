@@ -1,24 +1,10 @@
-import "@/app/_styles/globals.css";
-import Head from "next/head";
-import Link from "next/link";
-import "lineicons/web-font/lineicons.css";
-export const metadata = {
-  title: "Interlink",
-  description: "Interlink.mr",
-};
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import "aos/dist/aos.css";
-import Header from "./_components/Header";
-import Footer from "./_components/Footer";
-import Navbar from "./_components/Navbar";
+// pages/_document.js
+import { Html, Head, Main, NextScript } from "next/document";
 
-export default function RootLayout({ children }) {
+export default function Document() {
   return (
-    <html lang="en">
-      <head>
+    <Html>
+      <Head>
         <link
           rel="stylesheet"
           href="https://cdn.lineicons.com/2.0/lineicons.css"
@@ -46,12 +32,11 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
           rel="stylesheet"
         />
-      </head>
+      </Head>
       <body>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <Main />
+        <NextScript />
       </body>
-    </html>
+    </Html>
   );
 }

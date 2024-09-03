@@ -1,3 +1,9 @@
+import Contact from "../_components/Contact";
+
 export default function Page() {
-  return <div>Contact pages</div>;
+  return (
+    <div className="mt-10">
+      <Contact />
+    </div>
+  );
 }
