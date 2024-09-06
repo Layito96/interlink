@@ -1,5 +1,5 @@
-// const BASE_URL = "http://localhost:1338/api";
-const BASE_URL = "https://cms-interlink.onrender.com/api";
+const BASE_URL = "http://localhost:1338/api";
+//const BASE_URL = "https://cms-interlink.onrender.com/api";
 
 const POPULATE_PARAMAS = "?populate=*";
 
@@ -132,6 +132,58 @@ export async function getValues() {
   } catch (error) {
     // Handle any errors that occurred during the fetch
     console.error("Fetch error:", error);
+    return []; // Return an empty array or handle the error as needed
+  }
+}
+
+export async function getArticles() {
+  try {
+    const response = await fetch(`${BASE_URL}/blogs${POPULATE_PARAMAS}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      // Handle the error if the response is not OK
+      console.error("Error fetching data:", response.statusText);
+      throw new Error("Error fetching articles");
+    }
+
+    const data = await response.json();
+    // console.log(data); // You can remove this in production
+
+    return data;
+  } catch (error) {
+    // Handle any errors that occurred during the fetch
+    console.error("Fetch articles error:", error);
+    return []; // Return an empty array or handle the error as needed
+  }
+}
+
+export async function getArticle(id) {
+  try {
+    const response = await fetch(`${BASE_URL}/blogs/${id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      // Handle the error if the response is not OK
+      console.error("Error fetching data:", response.statusText);
+      throw new Error("Error fetching articles");
+    }
+
+    const data = await response.json();
+    // console.log(data); // You can remove this in production
+
+    return data;
+  } catch (error) {
+    // Handle any errors that occurred during the fetch
+    console.error("Fetch articles error:", error);
     return []; // Return an empty array or handle the error as needed
   }
 }

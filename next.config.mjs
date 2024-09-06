@@ -8,6 +8,10 @@ const nextConfig = {
         hostname: "cms-interlink.onrender.com",
       },
       {
+        protocol: "http",
+        hostname: "localhost",
+      },
+      {
         protocol: "https",
         hostname: "priv-web-nomeo-prod.apnl.ws", // Added this line
       },
