@@ -131,7 +131,7 @@ async function Article() {
               const article = data.attributes || {};
               const imageUrl = article.image?.data?.attributes?.url || "";
               // const fullImageUrl = `http://localhost:1338${imageUrl}`;
-              const fullImageUrl = `https://cms-interlink.onrender.com/api${imageUrl}`;
+              const fullImageUrl = `https://cms-interlink.onrender.com/${imageUrl}`;
 
               return (
                 // <Link key={data.id} href={`/article/${data.id}`}>
