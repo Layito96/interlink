@@ -14,8 +14,8 @@ export default function Document() {
           href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
         />
         {/* Local CSS Files */}
-        <link rel="stylesheet" href="/assets/css/animate.css" />
-        <link rel="stylesheet" href="/assets/css/tailwind.css" />
+        {/* <link rel="stylesheet" href="/assets/css/animate.css" />
+        <link rel="stylesheet" href="/assets/css/tailwind.css" /> */}
 
         {/* Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
