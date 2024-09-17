@@ -2,10 +2,6 @@ import "@/app/_styles/globals.css";
 import Head from "next/head";
 import Link from "next/link";
 import "lineicons/web-font/lineicons.css";
-export const metadata = {
-  title: "Interlink",
-  description: "Interlink.mr",
-};
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -14,6 +10,15 @@ import "aos/dist/aos.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import Navbar from "./_components/Navbar";
+
+export const metadata = {
+  // title: "The Wild Oasis",
+  title: {
+    template: "%s / Interlink",
+    default: "Acceuil / Interlink",
+  },
+  description: "Interlink.mr",
+};
 
 export default function RootLayout({ children }) {
   return (

@@ -11,7 +11,8 @@ function Navbar() {
             <Link className="navbar-brand" href="/">
               <Image
                 src={newlogoInterlink}
-                alt="Logo"
+                alt="Logo Interlink"
+                priority
                 // placeholder="blur"
                 style={{ height: "100%" }}
               />

@@ -3,18 +3,19 @@ import Link from "next/link";
 import newlogoInterlink from "@/public/assets/img/logo/newlogoInterlink.svg";
 import banner from "@/public/assets/img/banner.jpg";
 import { getArticles } from "../_lib/data-services";
+import { formatDate } from "../_utiles/formatDate";
 
 async function Article() {
   const articles = await getArticles();
+
   return (
     <div>
       {/* title, author, imageSource ,content  */}
       <div className="mt-20 bg-accent  mx-auto py-20 relative">
         <div className="flex pt-10 justify-center items-center font-poppins py-10 lg:py-0 px-10">
           <div className="space-y-5 text-center w-full flex justify-center ">
-            <h1 className="text-4xl ">
-              Bits et Octets Explorés dans le Paysage Numérique en Constante
-              Évolution.
+            <h1 className="title-font text-primary mb-4 text-xl font-bold leading-10 tracking-tight sm:text-5xl ">
+              Articles
             </h1>
           </div>
         </div>
@@ -60,14 +61,10 @@ async function Article() {
             <option>Angular</option>
             <option>Developement Mobile</option>
           </select>
-
-          {/* Commented code (if needed) */}
-          {/* <div className="bg-red-500">Item 2</div> */}
-          {/* <div className="bg-green-500">Item 3</div> */}
         </div>
       </form>
 
-      <div className="mx-auto lg:mx-[10rem] md:mx-[7rem]">
+      {/* <div className="mx-auto lg:mx-[10rem] md:mx-[7rem]">
         <div className="wrapper mx-auto translate-x-[0] opacity-1 duration-500 mt-28 grid font-poppins grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 md:gap-6 p-2 lg:p-6">
           {articles &&
             articles.data &&
@@ -111,7 +108,7 @@ async function Article() {
                     <span>
                       <Image
                         width={50}
-                        height={30}
+                        height={50}
                         className="h-12 ml-6 rounded-full"
                         src={fullImageUrl}
                         alt="author image"
@@ -119,6 +116,64 @@ async function Article() {
                     </span>
                   </div>
                 </div>
+              );
+            })}
+        </div>
+      </div> */}
+      <div className="mx-90 px-90 md:px-8 lg:px-[20rem]">
+        {" "}
+        {/* Réduit le padding horizontal */}
+        <div className="wrapper mx-auto mt-28 grid gap-3 md:gap-4 p-2 lg:p-4 font-poppins sm:grid-cols-2 lg:grid-cols-2">
+          {/* <div className="wrapper mx-auto mt-28 grid gap-0.5 md:gap-0.5 p-2 lg:p-4 font-poppins sm:grid-cols-2 lg:grid-cols-2"> */}{" "}
+          {/* Réduit le gap et padding */}
+          {articles?.data?.length > 0 &&
+            articles.data.map((data) => {
+              const article = data.attributes || {};
+              const imageUrl = article.image?.data?.attributes?.url || "";
+              const fullImageUrl = `http://localhost:1338${imageUrl}`;
+
+              return (
+                // <Link key={data.id} href={`/article/${data.id}`}>
+                <div
+                  key={data.id}
+                  className="relative w-full group border rounded-lg shadow-md cursor-pointer overflow-hidden transition-transform duration-500 hover:shadow-lg"
+                >
+                  {/* Article Image */}
+                  <div className="relative w-full h-48">
+                    <Image
+                      fill
+                      className="object-cover rounded-t-lg group-hover:scale-105 transition-transform duration-200 ease-in-out"
+                      src={fullImageUrl}
+                      placeholder="blur"
+                      blurDataURL={fullImageUrl}
+                      quality={90}
+                      alt="article image"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                  {/* Article Content */}
+                  <div className="p-4 bg-white flex flex-col lg:flex-row justify-between items-start lg:items-center">
+                    {/* Article Text Content */}
+                    <div className="flex-1">
+                      <p className="text-lg title-font text-primary leading-10 tracking-tight font-bold">
+                        {article.title}
+                      </p>
+                      <p className="text-sm pb-4 mt-2">
+                        {formatDate(article.createdAt)}
+                      </p>
+                      <p className="text-sm mt-2">
+                        {article.description.substring(0, 150)}...
+                        <Link
+                          href={`/article/${data.id}`}
+                          className="text-blue-600 hover:underline"
+                        >
+                          Lire la suite
+                        </Link>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                // {/* </Link> */}
               );
             })}
         </div>

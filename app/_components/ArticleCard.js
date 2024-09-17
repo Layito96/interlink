@@ -96,7 +96,7 @@ function ArticleCard() {
           <div className="w-full px-4">
             <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
               <h1 className="title-font text-primary mb-4 text-xl font-bold leading-10 tracking-tight sm:text-5xl ">
-                Mieux nous décoder
+                Nos dérniers articles
               </h1>
             </div>
           </div>
@@ -111,9 +111,9 @@ function ArticleCard() {
                     <Image
                       src={article.imageSrc}
                       alt={article.title}
-                      width={500}
-                      height={160}
-                      className="w-full h-[160px] object-cover rounded-t-lg"
+                      width={500} // Définissez uniquement la largeur ou utilisez 'layout="responsive"' pour les images responsives
+                      height={160} // Assurez-vous que la dimension opposée est 'auto' pour éviter la déformation
+                      className="w-full h-auto object-cover rounded-t-lg" // Utilisez 'h-auto' pour maintenir le ratio
                     />
                   </div>
                 </div>

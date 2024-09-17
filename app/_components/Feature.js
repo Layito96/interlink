@@ -82,6 +82,10 @@ function Feature() {
                 height={300}
                 alt=""
                 className="object-cover"
+                style={{
+                  width: "auto", // Assure que la largeur est réglée sur "auto" pour maintenir le ratio d'aspect
+                  height: "auto", // Assure que la hauteur est réglée sur "auto" pour maintenir le ratio d'aspect
+                }}
               />
             </div>
           </div>

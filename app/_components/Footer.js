@@ -16,6 +16,7 @@ function Footer() {
                     height={300}
                     className="rounded-lg"
                     alt="Interlink Logo"
+                    priority
                   />
                 </div>
                 <p className="text-gray-300">
@@ -30,7 +31,7 @@ function Footer() {
                 </h3>
                 <ul>
                   <li>
-                    <Link href="#" className="footer-links">
+                    <Link href="/" className="footer-links">
                       Site Internet
                     </Link>
                   </li>
@@ -57,7 +58,7 @@ function Footer() {
                 </h3>
                 <ul>
                   <li>
-                    <Link href="#" className="footer-links">
+                    <Link href="/article" className="footer-links">
                       Articles
                     </Link>
                   </li>
@@ -94,7 +95,7 @@ function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="footer-links">
+                    <Link href="/contact" className="footer-links">
                       Contact
                     </Link>
                   </li>

@@ -22,6 +22,7 @@ function Header() {
           id="background-video"
           className="absolute inset-0 w-full h-screen object-cover -z-10"
           autoPlay
+          priority={"true"}
           loop
           muted
         >
@@ -76,6 +77,7 @@ function Header() {
                 data-aos="fade-up"
                 data-aos-once="true"
                 // placeholder="blur"
+                priority
                 src={robot2}
                 alt=""
                 className="-mt-4 h-[30rem] lg:float-right relative sm:mx-auto z-10"

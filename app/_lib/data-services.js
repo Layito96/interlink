@@ -1,11 +1,11 @@
 const BASE_URL = "http://localhost:1338/api";
 //const BASE_URL = "https://cms-interlink.onrender.com/api";
 
-const POPULATE_PARAMAS = "?populate=*";
+const POPULATE_PARAMAS = "?populate=*&pagination[pageSize]=10";
 
 export async function getMembers() {
   try {
-    const response = await fetch(`${BASE_URL}/products${POPULATE_PARAMAS}`, {
+    const response = await fetch(`${BASE_URL}/Products${POPULATE_PARAMAS}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -32,7 +32,7 @@ export async function getMembers() {
 export async function getTestimonials() {
   try {
     const response = await fetch(
-      `${BASE_URL}/testimonials${POPULATE_PARAMAS}`,
+      `${BASE_URL}/Testimonials${POPULATE_PARAMAS}`,
       {
         method: "GET",
         headers: {
@@ -60,7 +60,7 @@ export async function getTestimonials() {
 
 export async function getServices() {
   try {
-    const response = await fetch(`${BASE_URL}/services${POPULATE_PARAMAS}`, {
+    const response = await fetch(`${BASE_URL}/Services${POPULATE_PARAMAS}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -86,7 +86,7 @@ export async function getServices() {
 
 export async function getReferences() {
   try {
-    const response = await fetch(`${BASE_URL}/references${POPULATE_PARAMAS}`, {
+    const response = await fetch(`${BASE_URL}/References${POPULATE_PARAMAS}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -112,7 +112,7 @@ export async function getReferences() {
 
 export async function getValues() {
   try {
-    const response = await fetch(`${BASE_URL}/values${POPULATE_PARAMAS}`, {
+    const response = await fetch(`${BASE_URL}/Values${POPULATE_PARAMAS}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -126,7 +126,7 @@ export async function getValues() {
     }
 
     const data = await response.json();
-    //console.log(data); // You can remove this in production
+    //console.log("values data", data); // You can remove this in production
 
     return data;
   } catch (error) {
@@ -138,7 +138,32 @@ export async function getValues() {
 
 export async function getArticles() {
   try {
-    const response = await fetch(`${BASE_URL}/blogs${POPULATE_PARAMAS}`, {
+    const url = `${BASE_URL}/Blogs${POPULATE_PARAMAS}`;
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      console.error("Error fetching data:", response.statusText);
+      throw new Error("Error fetching articles");
+    }
+
+    const data = await response.json();
+    // console.log("articles data:", data); // Log the received data
+    return data;
+  } catch (error) {
+    console.error("Fetch articles error:", error);
+    return { data: [] }; // Ensure the return type matches the expected structure
+  }
+}
+
+export async function getArticle(id) {
+  try {
+    const response = await fetch(`${BASE_URL}/blogs/${id}${POPULATE_PARAMAS}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -152,7 +177,7 @@ export async function getArticles() {
     }
 
     const data = await response.json();
-    // console.log(data); // You can remove this in production
+    console.log(data); // You can remove this in production
 
     return data;
   } catch (error) {
@@ -162,9 +187,11 @@ export async function getArticles() {
   }
 }
 
-export async function getArticle(id) {
+export async function getAbout() {
   try {
-    const response = await fetch(`${BASE_URL}/blogs/${id}`, {
+    const url = `${BASE_URL}/about${POPULATE_PARAMAS}`;
+
+    const response = await fetch(url, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -172,18 +199,15 @@ export async function getArticle(id) {
     });
 
     if (!response.ok) {
-      // Handle the error if the response is not OK
       console.error("Error fetching data:", response.statusText);
-      throw new Error("Error fetching articles");
+      throw new Error("Error fetching about");
     }
 
     const data = await response.json();
-    // console.log(data); // You can remove this in production
-
+    console.log("About data:", data.data); // Log the received data
     return data;
   } catch (error) {
-    // Handle any errors that occurred during the fetch
     console.error("Fetch articles error:", error);
-    return []; // Return an empty array or handle the error as needed
+    return { data: [] }; // Ensure the return type matches the expected structure
   }
 }
