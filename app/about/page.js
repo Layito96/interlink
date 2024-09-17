@@ -9,7 +9,7 @@ export default async function Page() {
   const about = aboutsData?.data; // Ajouter une vérification pour éviter les erreurs si `data` est undefined
   const images = about?.attributes?.image?.data?.attributes;
   const imageUrl = about?.attributes?.image?.data?.attributes?.url || "";
-  const fullImageUrl = `http://localhost:1338${imageUrl}`;
+  const fullImageUrl = `https://cms-interlink.onrender.com/api${imageUrl}`;
 
   return (
     <>
