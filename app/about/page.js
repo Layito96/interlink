@@ -5,7 +5,7 @@ import About from "../_components/About";
 
 export default async function Page() {
   const aboutsData = await getAbout();
-  console.log("donnees about", aboutsData);
+  // console.log("donnees about", aboutsData);
   const about = aboutsData?.data; // Ajouter une vérification pour éviter les erreurs si `data` est undefined
   const images = about?.attributes?.image?.data?.attributes;
   const imageUrl = about?.attributes?.image?.data?.attributes?.url || "";
@@ -22,9 +22,9 @@ export default async function Page() {
             <p className="text-center">
               <Image
                 src={fullImageUrl}
-                alt={images.name}
-                width={Math.min(images.width, 500)}
-                height={Math.min(images.height, 300)}
+                alt={images?.name || "Image"}
+                width={images?.width ? Math.min(images.width, 500) : 500} // Fallback width if not defined
+                height={images?.height ? Math.min(images.height, 300) : 300} // Fallback height if not defined
                 className="text-center inline-flex"
                 style={{
                   objectFit: "contain",
@@ -37,7 +37,8 @@ export default async function Page() {
             </p>
             <p>{about.attributes.slogan}</p>
             <div className="text-justify px-[20rem] py-5">
-              {about.attributes.content?.length > 0 &&
+              {Array.isArray(about?.attributes?.content) &&
+                about.attributes.content.length > 0 &&
                 about.attributes.content.map((item, index) => {
                   switch (item.type) {
                     case "heading":
@@ -120,10 +121,10 @@ export default async function Page() {
                           className="flex justify-center items-center mx-auto"
                         >
                           <Image
-                            src={item.image.url}
-                            alt={item.image.name}
-                            width={Math.min(item.image.width, 500)}
-                            height={Math.min(item.image.height, 300)}
+                            src={item?.image.url}
+                            alt={item?.image.name && item?.image.name}
+                            width={Math.min(item?.image.width, 500)}
+                            height={Math.min(item?.image.height, 300)}
                             style={{
                               objectFit: "contain",
                               maxWidth: "100%",

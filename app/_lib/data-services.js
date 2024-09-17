@@ -204,7 +204,7 @@ export async function getAbout() {
     }
 
     const data = await response.json();
-    console.log("About data:", data.data); // Log the received data
+    // console.log("About data:", data.data); // Log the received data
     return data;
   } catch (error) {
     console.error("Fetch articles error:", error);
