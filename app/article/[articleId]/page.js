@@ -15,7 +15,8 @@ async function page({ params }) {
   const article = articleData.data;
   console.log("article d", article.attributes.content);
   const imageUrl = article.attributes.image?.data?.attributes?.url || "";
-  const fullImageUrl = `http://localhost:1338${imageUrl}`;
+  // const fullImageUrl = `http://localhost:1338${imageUrl}`;
+  const fullImageUrl = `https://cms-interlink.onrender.com/api${imageUrl}`;
 
   return (
     <div>
