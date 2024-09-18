@@ -1,4 +1,9 @@
 import Link from "next/link";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/app/_components/ui/hover-card";
 
 function NotFound() {
   return (
@@ -12,6 +17,12 @@ function NotFound() {
       >
         Go back home
       </Link>
+      <HoverCard>
+        <HoverCardTrigger>Hover</HoverCardTrigger>
+        <HoverCardContent>
+          The React Framework – created and maintained by @vercel.
+        </HoverCardContent>
+      </HoverCard>
     </main>
   );
 }
