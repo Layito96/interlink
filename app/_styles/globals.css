@@ -478,3 +478,28 @@ p {
   margin: 0;
   order: 1;
 }
+
+
+.productshero .productherotitle1 h1 em svg {
+  position: absolute;
+  left: 55%;
+  top: 22%;
+  /* transform: translate(-50%, -50%); */
+  width: calc(10% + 16px);
+  height: calc(5% + 8px);
+  fill: #07503e;
+}
+
+@media screen and (min-width: 700px) {
+  .productshero .productherotitle1 h1 {
+      font-size: 48px;
+      line-height: 52.8px;
+  }
+}
+.productshero .productherotitle1 h1 {
+  color: #101010;
+  /* font-family: var(--pangea-medium), sans-serif; */
+
+  font-weight: 400;
+
+}

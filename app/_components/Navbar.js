@@ -1,7 +1,45 @@
+
+"use client"
 import Link from "next/link";
+
+import { useEffect } from "react";
+
 import Image from "next/image";
 import newlogoInterlink from "/public/newlogoInterlink.svg";
 function Navbar() {
+
+  useEffect(() => {
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+    const pageScrollLinks = document.querySelectorAll(".page-scroll");
+
+    // Close navbar when a link is clicked
+    pageScrollLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        navbarToggler.classList.remove("active");
+        navbarCollapse.classList.remove("show");
+      });
+    });
+
+    // Toggle navbar on click
+    const handleTogglerClick = () => {
+      navbarToggler.classList.toggle("active");
+      navbarCollapse.classList.toggle("show");
+    };
+
+    navbarToggler.addEventListener("click", handleTogglerClick);
+
+    // Cleanup event listeners when the component is unmounted
+    return () => {
+      navbarToggler.removeEventListener("click", handleTogglerClick);
+      // pageScrollLinks.forEach((link) => {
+      //   link.removeEventListener("click", () => {
+      //     navbarToggler.classList.remove("active");
+      //     navbarCollapse.classList.remove("show");
+      //   });
+      // });
+    };
+  }, []);
   return (
     <header id="header-wrap" className="relative bg-accent">
       {/* <!-- Navbar Start --> */}
