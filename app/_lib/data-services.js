@@ -225,14 +225,41 @@ export async function getWorks() {
 
     if (!response.ok) {
       console.error("Error fetching data:", response.statusText);
-      throw new Error("Error fetching articles");
+      throw new Error("Error fetching ");
     }
 
     const data = await response.json();
-    // console.log("articles data:", data); // Log the received data
+    // console.log("About data:", data.data); // Log the received data
     return data;
   } catch (error) {
-    console.error("Fetch articles error:", error);
+    console.error("Fetch  error:", error);
+    console.warn("Fetch  error:");
+    return { data: [] }; // Ensure the return type matches the expected structure
+  }
+}
+
+export async function getProducts() {
+  try {
+    const url = `${BASE_URL}/Products${POPULATE_PARAMAS}`;
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      console.error("Error fetching data:", response.statusText);
+      throw new Error("Error fetching ");
+    }
+
+    const data = await response.json();
+    // console.log("About data:", data.data); // Log the received data
+    return data;
+  } catch (error) {
+    console.error("Fetch  error:", error);
+    console.warn("Fetch  error:");
     return { data: [] }; // Ensure the return type matches the expected structure
   }
 }

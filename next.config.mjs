@@ -12,6 +12,10 @@ const nextConfig = {
         hostname: "localhost",
       },
       {
+        protocol: "http",
+        hostname: "192.168.1.55",
+      },
+      {
         protocol: "https",
         hostname: "priv-web-nomeo-prod.apnl.ws", // Added this line
       },
