@@ -2,8 +2,16 @@ import Image from "next/image";
 import ing from "@/public/ing.svg";
 import amnirtracking from "@/public/assets/img/projects/amnirtrack.png";
 import Link from "next/link";
+import { getProducts } from "../_lib/data-services";
+import BASE_URL from "../_utiles/constants";
+// import { BASE_URL } from "../_utiles/constants";
 
-export default function Page() {
+export default async function Page() {
+
+
+  const productsData = await getProducts();
+  console.log("donnees productsData", productsData);
+  const products = productsData?.data;
   return (
     <div className="bg-[#f7fdff]">
       <section className="py-[232px] pb-[120px] productshero" style={{}}>
@@ -47,158 +55,79 @@ export default function Page() {
       <section>
         <div className="mx-auto container pr-wrapper">
           {/* <div className="style_container_title__6a_D7"><p className="style_subtitle__89Z0G">12 secteurs d’activités</p></div> */}
-          <div className="flex flex-row flex-wrap mt-[69px] pl-0 justify-between gap-10">
-            <div className="flex-1 rounded-[40px] bg-accent p-[40px] flex flex-col  mb-[80px]">
-              <div className="h-[120px]">
-                <Image
-                  className="max-w-[100%] h-[100%]"
-                  src={amnirtracking}
-                  alt={"lazy"}
-                />
-              </div>
-              <div className="mt-[16px] flex-1 flex flex-col">
-                <div className="text-[#9eb8e9] tracking-[3.32px] uppercase mt-0 mb-0 font-gabarito text-[20px] font-normal leading-[120%] no-underline">
-                  AMNIR Tracking
-                </div>
-                <p>
-                  Grâce à notre plateforme, calculez l&apos;empreinte carbone de
-                  votre entreprise et imaginez un système alimentaire qui
-                  fonctionne sans endommager nos écosystèmes.
-                </p>
-                <a className="mt-5 inline-flex items-center cursor-pointer gap-[8px] no-underline">
-                  <svg
-                    className="style_btn_arrow__v0VZk w-[20px]"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      className="fill-[#101010]"
-                      d="M10 20C4.47667 20 -3.91363e-07 15.5233 -8.74228e-07 10C-1.35709e-06 4.47667 4.47666 1.35709e-06 10 8.74228e-07C15.5233 3.91363e-07 20 4.47667 20 10C20 15.5233 15.5233 20 10 20Z"
-                    ></path>
-                    <path
-                      className="stroke-[#fff]"
-                      d="M14.4443 10L5.55545 10"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                    <path
-                      className="stroke-white"
-                      d="M11.111 6.66683L14.4443 10.0002L11.111 13.3335"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                  </svg>
-                  <span className="inline-flex relative items-center no-underline font-semibold text-[14px] leading-[18.2px] text-[#101010]">
-                    <span>Plus d&apos;infos</span>
-                  </span>
-                </a>
-              </div>
-            </div>
-            <div className="flex-1 rounded-[40px] bg-[#fafafa] hover:bg-accent p-[40px] flex flex-col  mb-[80px]">
-              <div className="h-[120px]">
-                <Image
-                  className="max-w-[100%] h-[100%]"
-                  src={amnirtracking}
-                  alt={"lazy"}
-                />
-              </div>
-              <div className="mt-[16px] flex-1 flex flex-col">
-                <div className="text-[#9eb8e9] tracking-[3.32px] uppercase mt-0 mb-0 font-gabarito text-[20px] font-normal leading-[120%] no-underline">
-                  AMNIR SMS
-                </div>
-                <p>
-                  Le changement climatique place les assureurs face à de
-                  nombreuses incertitudes. Cependant, cette situation offre
-                  aussi de vastes possibilités de penser et d&apos;agir
-                  différemment pour répondre aux besoins d&apos;un nouveau
-                  marché de clients qui recherchent de nouveaux produits,
-                  services et expériences.{" "}
-                </p>
-                <a className="mt-5 inline-flex items-center cursor-pointer gap-[8px] no-underline">
-                  <svg
-                    className="style_btn_arrow__v0VZk w-[20px]"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      className="fill-[#101010]"
-                      d="M10 20C4.47667 20 -3.91363e-07 15.5233 -8.74228e-07 10C-1.35709e-06 4.47667 4.47666 1.35709e-06 10 8.74228e-07C15.5233 3.91363e-07 20 4.47667 20 10C20 15.5233 15.5233 20 10 20Z"
-                    ></path>
-                    <path
-                      className="stroke-[#fff]"
-                      d="M14.4443 10L5.55545 10"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                    <path
-                      className="stroke-white"
-                      d="M11.111 6.66683L14.4443 10.0002L11.111 13.3335"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                  </svg>
-                  <span className="inline-flex relative items-center no-underline font-semibold text-[14px] leading-[18.2px] text-[#101010]">
-                    <span>Plus d&apos;infos</span>
-                  </span>
-                </a>
-              </div>
-            </div>
 
-            <div className="flex-1 rounded-[40px] bg-[#fafafa] p-[40px] flex flex-col  mb-[80px]">
-              <div className="h-[120px]">
-                <Image
-                  className="max-w-[100%] h-[100%]"
-                  src={amnirtracking}
-                  alt={"lazy"}
-                />
-              </div>
-              <div className="mt-[16px] flex-1 flex flex-col">
-                <div className="text-[#9eb8e9] tracking-[3.32px] uppercase mt-0 mb-0 font-gabarito text-[20px] font-normal leading-[120%] no-underline">
-                  AMNIR GED
+        
+          {/* <div className="flex  flex-wrap mt-[69px] -mx-4 gap-x-8"> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-[69px]"> {/* Use grid layout */}
+
+
+          {products.length > 0 ? (
+              products.map((product) => {
+                const attributes = product.attributes || {};
+                // const logoUrl = attributes.logo?.data?.attributes?.url || "";
+
+                const title = attributes.title;
+                const description = attributes.Description;
+                const logo = attributes.logo;
+                console.log("Products logo ",logo.data.attributes.url);
+                const logoUrl = logo.data.attributes.url || "";
+                return (<div key={product.id} className=" rounded-[40px] bg-accent p-4 flex flex-col  mb-[80px] ">
+                <div className="h-[120px] relative">
+                  <Image
+                    className="max-w-[100%] h-[100%]  "
+                    src={BASE_URL+logoUrl}
+                    alt={"lazy"}
+                    // fill
+                    width={120}
+                    height={150}
+                  />
                 </div>
-                <p>
-                  Grâce à notre plateforme, calculez l&apos;empreinte carbone de
-                  votre entreprise et imaginez un système alimentaire qui
-                  fonctionne sans endommager nos écosystèmes.
-                </p>
-                <a className="mt-5 inline-flex items-center cursor-pointer gap-[8px] no-underline">
-                  <svg
-                    className="style_btn_arrow__v0VZk w-[20px]"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      className="fill-[#101010]"
-                      d="M10 20C4.47667 20 -3.91363e-07 15.5233 -8.74228e-07 10C-1.35709e-06 4.47667 4.47666 1.35709e-06 10 8.74228e-07C15.5233 3.91363e-07 20 4.47667 20 10C20 15.5233 15.5233 20 10 20Z"
-                    ></path>
-                    <path
-                      className="stroke-[#fff]"
-                      d="M14.4443 10L5.55545 10"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                    <path
-                      className="stroke-white"
-                      d="M11.111 6.66683L14.4443 10.0002L11.111 13.3335"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                  </svg>
-                  <span className="inline-flex relative items-center no-underline font-semibold text-[14px] leading-[18.2px] text-[#101010]">
-                    <span>Plus d&apos;infos</span>
-                  </span>
-                </a>
-              </div>
-            </div>
+                <div className="mt-[16px] flex-1 flex flex-col">
+                  <div className="text-[#9eb8e9] tracking-[3.32px] uppercase mt-0 mb-0 font-gabarito text-[20px] font-normal leading-[120%] no-underline">
+                    {title}
+                  </div>
+                  <p>
+
+                    {description &&
+                              description.substring(0, 200)}
+                            ...
+                  </p>
+                  <a className="mt-5 inline-flex items-center cursor-pointer gap-[8px] no-underline" href={`/products/${product.id}`} >
+                    <svg
+                      className="style_btn_arrow__v0VZk w-[20px]"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        className="fill-[#101010]"
+                        d="M10 20C4.47667 20 -3.91363e-07 15.5233 -8.74228e-07 10C-1.35709e-06 4.47667 4.47666 1.35709e-06 10 8.74228e-07C15.5233 3.91363e-07 20 4.47667 20 10C20 15.5233 15.5233 20 10 20Z"
+                      ></path>
+                      <path
+                        className="stroke-[#fff]"
+                        d="M14.4443 10L5.55545 10"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      ></path>
+                      <path
+                        className="stroke-white"
+                        d="M11.111 6.66683L14.4443 10.0002L11.111 13.3335"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      ></path>
+                    </svg>
+                    <span className="inline-flex relative items-center no-underline font-semibold text-[14px] leading-[18.2px] text-[#101010]">
+                      <span>Plus d&apos;infos</span>
+                    </span>
+                  </a>
+                </div>
+              </div>);
+              })) : (
+                <p className="text-white text-center">No products available.</p>
+              )}
+          
           </div>
         </div>
       </section>
