@@ -479,16 +479,16 @@ p {
   order: 1;
 }
 
-
+/* 
 .productshero .productherotitle1 h1 em svg {
   position: absolute;
   left: 55%;
   top: 22%;
-  /* transform: translate(-50%, -50%); */
+  transform: translate(-50%, -50%);
   width: calc(10% + 16px);
   height: calc(5% + 8px);
   fill: #07503e;
-}
+} */
 
 @media screen and (min-width: 700px) {
   .productshero .productherotitle1 h1 {
@@ -502,4 +502,10 @@ p {
 
   font-weight: 400;
 
+}
+
+@media screen and (max-width: 700px) {
+  .pr-wrapper {
+      width: calc(100% - 50px);
+  }
 }
