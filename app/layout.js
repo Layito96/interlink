@@ -12,6 +12,10 @@ import "aos/dist/aos.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import Navbar from "./_components/Navbar";
+import { Inter } from "next/font/google"; // Example import for custom fonts
+
+// Example of using a Google Font
+const inter = Inter({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
   // title: "The Wild Oasis",
@@ -55,7 +59,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>
+      <body className={inter.className}>
         <Navbar />
         <main>{children}</main>
         <Footer />
