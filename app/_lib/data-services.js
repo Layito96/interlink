@@ -1,5 +1,5 @@
-// const BASE_URL = "http://localhost:1338/api";
-const BASE_URL = "https://cms-interlink.onrender.com/api";
+const BASE_URL = "http://localhost:1338/api";
+// const BASE_URL = "https://cms-interlink.onrender.com/api";
 
 const POPULATE_PARAMAS = "?populate=*&pagination[pageSize]=10";
 
@@ -205,6 +205,31 @@ export async function getAbout() {
 
     const data = await response.json();
     // console.log("About data:", data.data); // Log the received data
+    return data;
+  } catch (error) {
+    console.error("Fetch articles error:", error);
+    return { data: [] }; // Ensure the return type matches the expected structure
+  }
+}
+
+export async function getWorks() {
+  try {
+    const url = `${BASE_URL}/works${POPULATE_PARAMAS}`;
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      console.error("Error fetching data:", response.statusText);
+      throw new Error("Error fetching articles");
+    }
+
+    const data = await response.json();
+    // console.log("articles data:", data); // Log the received data
     return data;
   } catch (error) {
     console.error("Fetch articles error:", error);

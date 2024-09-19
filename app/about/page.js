@@ -1,15 +1,25 @@
 import React from "react";
-import { getAbout } from "../_lib/data-services";
+import { getAbout, getWorks } from "../_lib/data-services";
 import Image from "next/image";
 import About from "../_components/About";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/app/_components/ui/card";
 
 export default async function Page() {
   const aboutsData = await getAbout();
-  // console.log("donnees about", aboutsData);
+  const worksData = await getWorks();
+  const works = worksData?.data;
+  console.log("donnees worksData", works);
   const about = aboutsData?.data; // Ajouter une vérification pour éviter les erreurs si `data` est undefined
   const images = about?.attributes?.image?.data?.attributes;
   const imageUrl = about?.attributes?.image?.data?.attributes?.url || "";
-  const fullImageUrl = `https://cms-interlink.onrender.com/api${imageUrl}`;
+  const fullImageUrl = `https://cms-interlink.onrender.com${imageUrl}`;
 
   return (
     <>
@@ -139,13 +149,25 @@ export default async function Page() {
                       return null;
                   }
                 })}
+              <Card>
+                <CardHeader>
+                  <CardTitle>Card Title</CardTitle>
+                  <CardDescription>Card Description</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p>Card Content</p>
+                </CardContent>
+                <CardFooter>
+                  <p>Card Footer</p>
+                </CardFooter>
+              </Card>
             </div>
           </>
         ) : (
           <p>Loading...</p>
         )}
       </div>
-      <About />
+      <About Works={works} />
     </>
   );
 }

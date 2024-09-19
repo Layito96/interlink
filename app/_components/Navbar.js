@@ -1,5 +1,4 @@
-
-"use client"
+"use client";
 import Link from "next/link";
 
 import { useEffect } from "react";
@@ -7,7 +6,6 @@ import { useEffect } from "react";
 import Image from "next/image";
 import newlogoInterlink from "/public/newlogoInterlink.svg";
 function Navbar() {
-
   useEffect(() => {
     const navbarToggler = document.querySelector(".navbar-toggler");
     const navbarCollapse = document.querySelector(".navbar-collapse");
@@ -90,7 +88,8 @@ function Navbar() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="page-scroll" href="#products">
+                  {/* <Link className="page-scroll" href="#products"> */}
+                  <Link className="page-scroll" href="/products">
                     Produits
                   </Link>
                 </li>
