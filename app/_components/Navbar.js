@@ -88,19 +88,18 @@ function Navbar() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  {/* <Link className="page-scroll" href="#products"> */}
                   <Link className="page-scroll" href="/products">
                     Produits
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="page-scroll" href="#team">
+                  <Link className="page-scroll" href="/about">
                     Equipe
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="page-scroll" href="#testimonial">
-                    Testimonial
+                  <Link className="page-scroll" href="/articles">
+                    Articles
                   </Link>
                 </li>
                 <li className="nav-item">

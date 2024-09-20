@@ -34,8 +34,7 @@ export default function RootLayout({ children }) {
         <link
           rel="stylesheet"
           href="https://cdn.lineicons.com/2.0/lineicons.css"
-        />{" "}
-        *
+        />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"

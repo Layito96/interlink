@@ -233,7 +233,6 @@ export async function getWorks() {
     return data;
   } catch (error) {
     console.error("Fetch  error:", error);
-    console.warn("Fetch  error:");
     return { data: [] }; // Ensure the return type matches the expected structure
   }
 }

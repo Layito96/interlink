@@ -75,8 +75,8 @@ function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="footer-links">
-                      Pricing
+                    <Link href="/pricing" className="footer-links">
+                      Nos Offres
                     </Link>
                   </li>
                   <li>
