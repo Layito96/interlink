@@ -100,6 +100,14 @@ function Pricing() {
     // </section>
     <section id="pricing" className="py-12 bg-accent">
       <div className="container mx-auto text-center">
+        <div className="text-center">
+          <h1 className="title-font text-primary mb-4 text-xl font-bold leading-10 tracking-tight sm:text-5xl ">
+            Nos Offres
+          </h1>
+          <div className="flex mb-3 justify-center">
+            <div className="w-16 h-1 rounded-full bg-accent-hover inline-flex"></div>
+          </div>
+        </div>
         <div className="mb-8">
           {/* Title and Description */}
           <h4 className="text-2xl font-semibold text-gray-800">
@@ -114,7 +122,6 @@ function Pricing() {
             expérience utilisateur et renforcer l’efficacité de vos opérations.
           </p>
         </div>
-
         {/* SaaS Features in Grid Layout */}
         <div className="container">
           <div className="flex flex-wrap justify-center md:justify-start">

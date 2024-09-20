@@ -84,7 +84,7 @@ function Navbar() {
                 </li>
                 <li className="nav-item">
                   <Link className="page-scroll" href="#pricing">
-                    Pricing
+                    Nos Offres
                   </Link>
                 </li>
                 <li className="nav-item">
