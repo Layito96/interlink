@@ -2,6 +2,7 @@
 const BASE_URL = "https://cms-interlink.onrender.com/api";
 
 const POPULATE_PARAMAS = "?populate=*&pagination[pageSize]=10";
+// const POPULATE_PARAMAS = "?populate=*&pagination[pageSize]=10";
 
 export async function getMembers() {
   try {
