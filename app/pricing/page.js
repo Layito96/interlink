@@ -40,9 +40,9 @@ function page() {
             </div>
           </div>
         </div> */}
-        <div class="container mx-auto px-4">
-          <div class="flex flex-col lg:flex-row justify-between items-start mx-3 space-y-8 lg:space-y-0 lg:space-x-8 px-3">
-            <div class="lg:w-[61%] text-left px-2">
+        <div class="container ">
+          <div class="">
+            <div class="lg:w-[61%] text-left px-3">
               <h1 class="text-xl font-bold leading-10 tracking-tight sm:text-5xl  text-primary  pt-10 mb-4">
                 Découvrez l&apos;ensemble <br /> de nos offres
               </h1>
@@ -353,10 +353,10 @@ function page() {
         </div>
       </section>
       <section className="py-8 bg-gray-100">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="container">
+          <div className="flex flex-wrap items-center">
             {/* Text Section */}
-            <div>
+            <div className="lg:w-[50%] text-left px-3">
               <h2 className="text-2xl font-semibold mb-4 sm:text-5xl">
                 Tarification
               </h2>
@@ -397,7 +397,7 @@ function page() {
             </div>
 
             {/* Image Section */}
-            <div className="flex justify-center items-center">
+            <div className="lg:w-[50%] flex justify-center lg:justify-end">
               <Image
                 src={creditCard}
                 width={1024}
