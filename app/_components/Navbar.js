@@ -83,7 +83,7 @@ function Navbar() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="page-scroll" href="#pricing">
+                  <Link className="page-scroll" href="/pricing">
                     Nos Offres
                   </Link>
                 </li>
@@ -94,11 +94,11 @@ function Navbar() {
                 </li>
                 <li className="nav-item">
                   <Link className="page-scroll" href="/about">
-                    Equipe
+                    A propos
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="page-scroll" href="/articles">
+                  <Link className="page-scroll" href="/article">
                     Articles
                   </Link>
                 </li>
