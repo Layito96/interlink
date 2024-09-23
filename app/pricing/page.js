@@ -42,7 +42,7 @@ function page() {
         </div> */}
         <div className="container ">
           <div className="flex flex-wrap items-center">
-            <div className="lg:w-[61%] text-left px-3">
+            <div className="lg:w-3/5 text-left px-3">
               <h1 className="text-xl font-bold leading-10 tracking-tight sm:text-5xl  text-primary  pt-10 mb-4">
                 Découvrez l&apos;ensemble <br /> de nos offres
               </h1>
@@ -51,7 +51,7 @@ function page() {
                 d&apos;hébergement.
               </p>
             </div>
-            <div className="lg:w-[39%] flex justify-center lg:justify-end">
+            <div className="lg:w-2/5 flex justify-center lg:justify-end">
               <Image
                 alt="Image"
                 loading="lazy"
