@@ -41,7 +41,7 @@ function page() {
           </div>
         </div> */}
         <div class="container ">
-          <div class="">
+          <div class="flex flex-wrap items-center">
             <div class="lg:w-[61%] text-left px-3">
               <h1 class="text-xl font-bold leading-10 tracking-tight sm:text-5xl  text-primary  pt-10 mb-4">
                 Découvrez l&apos;ensemble <br /> de nos offres
