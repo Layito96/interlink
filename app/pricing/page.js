@@ -52,7 +52,7 @@ function page() {
               </p>
             </div>
             <div className="lg:w-2/5 flex justify-center lg:justify-end">
-              <Image
+              {/* <Image
                 alt="Image"
                 loading="lazy"
                 width="594"
@@ -60,6 +60,21 @@ function page() {
                 decoding="async"
                 className="inline-block"
                 style="color:transparent;object-fit:contain;max-width:100%;height:auto"
+                src={logo}
+              /> */}
+              <Image
+                alt="Image"
+                // loading="lazy"
+                width={594}
+                height={377}
+                decoding="async"
+                className="inline-block"
+                style={{
+                  color: "transparent",
+                  objectFit: "contain",
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
                 src={logo}
               />
             </div>
