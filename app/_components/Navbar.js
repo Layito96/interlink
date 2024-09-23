@@ -46,7 +46,7 @@ function Navbar() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="page-scroll" href="#services">
+                  <Link className="page-scroll" href="/services">
                     Services
                   </Link>
                 </li>
