@@ -44,11 +44,11 @@ function page() {
           <div class="flex flex-col lg:flex-row justify-between items-start mx-3 space-y-8 lg:space-y-0 lg:space-x-8 px-3">
             <div class="lg:w-[61%] text-left px-2">
               <h1 class="text-xl font-bold leading-10 tracking-tight sm:text-5xl  text-primary  pt-10 mb-4">
-                Découvrez l'ensemble <br /> de nos offres
+                Découvrez l&apos;ensemble <br /> de nos offres
               </h1>
               <p class="text-gray-700 leading-relaxed">
                 Faites votre choix entre nos deux principaux modes
-                d’hébergement.
+                d&apos;hébergement.
               </p>
             </div>
             <div class="lg:w-[39%] flex justify-center lg:justify-end">
