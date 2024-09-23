@@ -40,25 +40,25 @@ function page() {
             </div>
           </div>
         </div> */}
-        <div class="container ">
-          <div class="flex flex-wrap items-center">
-            <div class="lg:w-[61%] text-left px-3">
-              <h1 class="text-xl font-bold leading-10 tracking-tight sm:text-5xl  text-primary  pt-10 mb-4">
+        <div className="container ">
+          <div className="flex flex-wrap items-center">
+            <div className="lg:w-[61%] text-left px-3">
+              <h1 className="text-xl font-bold leading-10 tracking-tight sm:text-5xl  text-primary  pt-10 mb-4">
                 Découvrez l&apos;ensemble <br /> de nos offres
               </h1>
-              <p class="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed">
                 Faites votre choix entre nos deux principaux modes
                 d&apos;hébergement.
               </p>
             </div>
-            <div class="lg:w-[39%] flex justify-center lg:justify-end">
+            <div className="lg:w-[39%] flex justify-center lg:justify-end">
               <Image
                 alt="Image"
                 loading="lazy"
                 width="594"
                 height="377"
                 decoding="async"
-                class="inline-block"
+                className="inline-block"
                 style="color:transparent;object-fit:contain;max-width:100%;height:auto"
                 src={logo}
               />

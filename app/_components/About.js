@@ -200,7 +200,7 @@ function About({ Works }) {
               // </Card> */}
             )}
           </div>
-          <Cards class="mt-[20px] m-[-8px] mb-[31px] pt-[14px] pl-[16px] pr-[16px] pb-[16px] bg-white rounded-[16px]">
+          <Cards className="mt-[20px] m-[-8px] mb-[31px] pt-[14px] pl-[16px] pr-[16px] pb-[16px] bg-white rounded-[16px]">
             <div
               onMouseEnter={() => handleHover("engineering")}
               className={`cursor-pointer p-2 rounded ${
