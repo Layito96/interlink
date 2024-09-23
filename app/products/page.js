@@ -53,25 +53,27 @@ export default async function Page() {
       <section>
         <div className="mx-auto container pr-wrapper">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-[69px]">
-            {/* Use grid layout */}
             {products.length > 0 ? (
               products.map((product) => {
                 const attributes = product.attributes || {};
+                // const logoUrl = attributes.logo?.data?.attributes?.url || "";
+
                 const title = attributes.title;
                 const description = attributes.Description;
                 const logo = attributes.logo;
-                const logoUrl = logo.data?.attributes?.url || "";
-
+                console.log("Products logo ", logo.data.attributes.url);
+                const logoUrl = logo.data.attributes.url || "";
                 return (
                   <div
                     key={product.id}
-                    className="rounded-[40px] bg-accent p-4 flex flex-col mb-[80px]"
+                    className=" rounded-[40px] bg-accent p-4 flex flex-col  mb-[80px] "
                   >
                     <div className="h-[120px] relative">
                       <Image
-                        className="max-w-[100%] h-[100%]"
+                        className="max-w-[100%] h-[100%]  "
                         src={BASE_URL + logoUrl}
                         alt={"lazy"}
+                        // fill
                         width={120}
                         height={150}
                       />
