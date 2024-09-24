@@ -166,13 +166,13 @@ export default function Page() {
                     <li>Tests</li>
                   </ul>
                   <p>
-                    Ayant toutes les clés en main, notre équipe d’experts peut
-                    implémenter le projet. Selon le type de développement, notre
-                    équipe aura recours à différentes technologies. En
+                    Ayant toutes les clés en main, notre équipe d&apos;experts
+                    peut implémenter le projet. Selon le type de développement,
+                    notre équipe aura recours à différentes technologies. En
                     parallèle, nous prenons aussi en charge le développement
-                    d’API correspondant aux logiques métiers requises pour votre
-                    plateforme, et mettons à votre disposition un backoffice de
-                    gestion.
+                    d&apos;API correspondant aux logiques métiers requises pour
+                    votre plateforme, et mettons à votre disposition un
+                    backoffice de gestion.
                   </p>
                 </div>
               </CardContent>
@@ -200,10 +200,10 @@ export default function Page() {
                   </ul>
                   <p>
                     La phase de suivi vise à assurer le bon déploiement de
-                    l’application sur les stores, à effectuer des tests
-                    supplémentaires sur tous supports, à surveiller les
-                    performances et à fournir un support continu. Nous proposons
-                    aussi la maintenance et l&apos;hébergement de
+                    lhttps://crn.mr/fr/application sur les stores, à effectuer
+                    des tests supplémentaires sur tous supports, à surveiller
+                    les performances et à fournir un support continu. Nous
+                    proposons aussi la maintenance et l&apos;hébergement de
                     l&apos;application. Nous construisons des partenariats sur
                     le long terme et vous accompagnons de bout en bout.
                   </p>
@@ -236,37 +236,37 @@ export default function Page() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-[16px]">
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
-                <img src="https://www.nomeo.fr/images/technologies/figma.png"></img>
+                <Image src="https://www.nomeo.fr/images/technologies/figma.png" />
               </picture>
             </a>
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
-                <img src="https://www.nomeo.fr/images/technologies/figma.png"></img>
+                <Image src="https://www.nomeo.fr/images/technologies/figma.png" />
               </picture>
             </a>
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
-                <img src="https://www.nomeo.fr/images/technologies/figma.png"></img>
+                <Image src="https://www.nomeo.fr/images/technologies/figma.png" />
               </picture>
             </a>
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
-                <img src="https://www.nomeo.fr/images/technologies/figma.png"></img>
+                <Image src="https://www.nomeo.fr/images/technologies/figma.png" />
               </picture>
             </a>
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
-                <img src="https://www.nomeo.fr/images/technologies/figma.png"></img>
+                <Image src="https://www.nomeo.fr/images/technologies/figma.png" />
               </picture>
             </a>
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
-                <img src="https://www.nomeo.fr/images/technologies/figma.png"></img>
+                <Image src="https://www.nomeo.fr/images/technologies/figma.png" />
               </picture>
             </a>
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
-                <img src="https://www.nomeo.fr/images/technologies/figma.png"></img>
+                <Image src="https://www.nomeo.fr/images/technologies/figma.png" />
               </picture>
             </a>
           </div>
