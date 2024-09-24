@@ -38,12 +38,11 @@ async function page({ params }) {
             <div className="intro-logo">
               <Image
                 src={fullImageUrl}
-                width="326"
-                height="101"
+                width={326}
+                height={101}
                 alt={article.attributes.title}
-                //className="lazy entered loaded"
-                data-src={fullImageUrl}
-                data-ll-status="loaded"
+                // Le lazy loading est automatique dans Next.js
+                priority={false} // ou `priority={true}` si tu veux forcer un chargement immédiat
               />
             </div>
             <h1 className="intro-title text-4xl">{article.attributes.title}</h1>

@@ -149,7 +149,7 @@ export default async function Page() {
                       return null;
                   }
                 })}
-              <Card>
+              {/* <Card>
                 <CardHeader>
                   <CardTitle>Card Title</CardTitle>
                   <CardDescription>Card Description</CardDescription>
@@ -160,7 +160,7 @@ export default async function Page() {
                 <CardFooter>
                   <p>Card Footer</p>
                 </CardFooter>
-              </Card>
+              </Card> */}
             </div>
           </>
         ) : (

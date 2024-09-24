@@ -13,7 +13,7 @@ function page() {
   return (
     <>
       <section id="testimonial" className="pt-[150px] pb-24 bg-white">
-        <div className="container mx-auto px-4">
+        {/* <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row justify-between items-start mx-3 space-y-8 lg:space-y-0 lg:space-x-8">
             <div className="lg:w-6/12 text-left">
               <h1 className="text-xl font-bold leading-10 tracking-tight sm:text-5xl  text-primary  pt-10 mb-4">
@@ -36,6 +36,46 @@ function page() {
                   maxWidth: "100%",
                   height: "auto",
                 }}
+              />
+            </div>
+          </div>
+        </div> */}
+        <div className="container ">
+          <div className="flex flex-wrap items-center">
+            <div className="lg:w-3/5 text-left px-3">
+              <h1 className="text-xl font-bold leading-10 tracking-tight sm:text-5xl  text-primary  pt-10 mb-4">
+                Découvrez l&apos;ensemble <br /> de nos offres
+              </h1>
+              <p className="text-gray-700 leading-relaxed">
+                Faites votre choix entre nos deux principaux modes
+                d&apos;hébergement.
+              </p>
+            </div>
+            <div className="lg:w-2/5 flex justify-center lg:justify-end">
+              {/* <Image
+                alt="Image"
+                loading="lazy"
+                width="594"
+                height="377"
+                decoding="async"
+                className="inline-block"
+                style="color:transparent;object-fit:contain;max-width:100%;height:auto"
+                src={logo}
+              /> */}
+              <Image
+                alt="Image"
+                // loading="lazy"
+                width={594}
+                height={377}
+                decoding="async"
+                className="inline-block"
+                style={{
+                  color: "transparent",
+                  objectFit: "contain",
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
+                src={logo}
               />
             </div>
           </div>
@@ -328,10 +368,10 @@ function page() {
         </div>
       </section>
       <section className="py-8 bg-gray-100">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="container">
+          <div className="flex flex-wrap items-center">
             {/* Text Section */}
-            <div>
+            <div className="lg:w-[50%] text-left px-3">
               <h2 className="text-2xl font-semibold mb-4 sm:text-5xl">
                 Tarification
               </h2>
@@ -372,7 +412,7 @@ function page() {
             </div>
 
             {/* Image Section */}
-            <div className="flex justify-center items-center">
+            <div className="lg:w-[50%] flex justify-center lg:justify-end">
               <Image
                 src={creditCard}
                 width={1024}

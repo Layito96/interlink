@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Card, CardBody } from "@nextui-org/react";
+// import { Card, CardBody } from "@nextui-org/react";
 import {
   Autoplay,
   Navigation,
@@ -14,6 +14,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 import { getTestimonials } from "../_lib/data-services";
+// import { card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
+import { Card as Cards, CardContent as CardContents } from "./ui/card"; // Renommer ici
 
 function Testimonial() {
   const [testimonials, setTestimonials] = useState([]);
@@ -49,7 +58,7 @@ function Testimonial() {
       <section id="testimonial" className="py-24 bg-accent">
         <div className="container">
           <div className="flex justify-center mx-3">
-            <div className="w-full lg:w-10/12">
+            <div className="w-full lg:w-10/12 mx-auto">
               <div className="text-center">
                 <h2 className="mb-3 text-4xl text-primary font-bold tracking-wide">
                   Ce que nos clients disent de nous
@@ -58,76 +67,55 @@ function Testimonial() {
                   <div className="w-16 h-1 rounded-full bg-primary-hover inline-flex"></div>
                 </div>
               </div>
-              <Swiper
-                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-                slidesPerView={3} // 3 éléments par vue
-                spaceBetween={30} // Espacement entre les éléments
-                //  navigation
-                pagination={{ clickable: true }}
-                scrollbar={{ draggable: true }}
-                autoplay={{ delay: 3000, disableOnInteraction: false }} // 5-second delay
-                //onSwiper={(swiper) => console.log(swiper)}
-                //  onSlideChange={() => console.log('slide change')}
-                parallax={true}
-                breakpoints={{
-                  // Lorsque la largeur de l'écran est inférieure à 768px, afficher 1 élément
-                  0: {
-                    slidesPerView: 1,
-                  },
-                  // Lorsque la largeur de l'écran est entre 768px et 1024px, afficher 2 éléments
-                  768: {
-                    slidesPerView: 2,
-                  },
-                  // Lorsque la largeur de l'écran est supérieure à 1024px, afficher 3 éléments
-                  1024: {
-                    slidesPerView: 3,
-                  },
-                }}
-              >
-                {testimonialData.length > 0 ? (
-                  testimonialData.map((testimonial) => {
-                    const attributes = testimonial.attributes || {};
-                    const logoUrl =
-                      attributes.image?.data?.attributes?.url || "";
-                    return (
-                      <SwiperSlide key={testimonial.id}>
-                        <div className="item focus:outline-none">
-                          <div className="text-center py-10 px-8 md:px-10 rounded border border-gray-900">
-                            <div className="text-center">
-                              <p className="text-gray-600 leading-loose">
-                                {attributes.commentary}
-                              </p>
+              <div className="flex justify-center">
+                <Carousel className="w-full max-w-4xl">
+                  <CarouselContent>
+                    {testimonialData.length > 0 ? (
+                      testimonialData.map((testimonial) => {
+                        const attributes = testimonial.attributes || {};
+                        const logoUrl =
+                          attributes.image?.data?.attributes?.url || "";
+                        return (
+                          <CarouselItem key={testimonial.id}>
+                            <div className="p-1">
+                              <Cards>
+                                <CardContents className="text-center py-10 px-8 md:px-10 rounded border border-gray-900">
+                                  <p className="text-gray-600 leading-loose">
+                                    {attributes.commentary}
+                                  </p>
+                                  <div className="my-3 mx-auto w-24 h-24 shadow-md rounded-full relative">
+                                    <Image
+                                      fill
+                                      className="object-cover rounded-full p-2 w-full"
+                                      src={`https://cms-interlink.onrender.com${logoUrl}`}
+                                      alt=""
+                                      sizes="(max-width: 768px) 100vw, 
+                                (max-width: 1200px) 50vw, 
+                                33vw"
+                                    />
+                                  </div>
+                                  <h2 className="font-bold text-lg uppercase text-accent-hover mb-2">
+                                    {attributes.Name}
+                                  </h2>
+                                  <h3 className="font-medium text-primary text-sm">
+                                    {attributes.Compagnie}
+                                  </h3>
+                                </CardContents>
+                              </Cards>
                             </div>
-                            <div className="my-3 mx-auto w-24 h-24 shadow-md rounded-full relative">
-                              <Image
-                                fill
-                                className="object-cover rounded-full p-2 w-full"
-                                src={`https://cms-interlink.onrender.com${logoUrl}`}
-                                alt=""
-                                sizes="(max-width: 768px) 100vw, 
-         (max-width: 1200px) 50vw, 
-         33vw" // Ajustez en fonction de votre mise en page
-                              />
-                            </div>
-                            <div className="mb-2">
-                              <h2 className="font-bold text-lg uppercase text-accent-hover mb-2">
-                                {attributes.Name}
-                              </h2>
-                              <h3 className="font-medium text-primary text-sm">
-                                {attributes.Compagnie}
-                              </h3>
-                            </div>
-                          </div>
-                        </div>
-                      </SwiperSlide>
-                    );
-                  })
-                ) : (
-                  <p className="text-white text-center">
-                    No products available.
-                  </p>
-                )}
-              </Swiper>
+                          </CarouselItem>
+                        );
+                      })
+                    ) : (
+                      <p className="text-white text-center">
+                        No products available.
+                      </p>
+                    )}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
+              </div>
             </div>
           </div>
         </div>
