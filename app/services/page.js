@@ -2,7 +2,7 @@ import Services from "../_components/Services";
 import { HoverCard } from "../_components/ui/hover-card";
 
 import { Button } from "@/components/ui/button";
-
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -236,37 +236,58 @@ export default function Page() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-[16px]">
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
-                <Image src="https://www.nomeo.fr/images/technologies/figma.png" />
+                <Image
+                  src="https://www.nomeo.fr/images/technologies/figma.png"
+                  alt="technologies/figma"
+                />
               </picture>
             </a>
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
-                <Image src="https://www.nomeo.fr/images/technologies/figma.png" />
+                <Image
+                  src="https://www.nomeo.fr/images/technologies/figma.png"
+                  alt="technologies/figma"
+                />
               </picture>
             </a>
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
-                <Image src="https://www.nomeo.fr/images/technologies/figma.png" />
+                <Image
+                  src="https://www.nomeo.fr/images/technologies/figma.png"
+                  alt="technologies/figma"
+                />
               </picture>
             </a>
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
-                <Image src="https://www.nomeo.fr/images/technologies/figma.png" />
+                <Image
+                  src="https://www.nomeo.fr/images/technologies/figma.png"
+                  alt="technologies/figma"
+                />
               </picture>
             </a>
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
-                <Image src="https://www.nomeo.fr/images/technologies/figma.png" />
+                <Image
+                  src="https://www.nomeo.fr/images/technologies/figma.png"
+                  alt="technologies/figma"
+                />
               </picture>
             </a>
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
-                <Image src="https://www.nomeo.fr/images/technologies/figma.png" />
+                <Image
+                  src="https://www.nomeo.fr/images/technologies/figma.png"
+                  alt="technologies/figma"
+                />
               </picture>
             </a>
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
-                <Image src="https://www.nomeo.fr/images/technologies/figma.png" />
+                <Image
+                  src="https://www.nomeo.fr/images/technologies/figma.png"
+                  alt="technologies/figma"
+                />
               </picture>
             </a>
           </div>

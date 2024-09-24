@@ -178,7 +178,7 @@ export async function getArticle(id) {
     }
 
     const data = await response.json();
-    console.log(data); // You can remove this in production
+    // console.log(data); // You can remove this in production
 
     return data;
   } catch (error) {
