@@ -51,23 +51,28 @@ export default async function Page() {
       </section>
 
       <section>
-        <div className="mx-auto container pr-wrapper">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-[69px]">
-            {products.length > 0 ? (
-              products.map((product) => {
-                const attributes = product.attributes || {};
-                // const logoUrl = attributes.logo?.data?.attributes?.url || "";
+        <div className="-mx-4 container flex flex-wrap">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-[69px]"> */}
+          {products.length > 0 ? (
+            products.map((product) => {
+              const attributes = product.attributes || {};
+              // const logoUrl = attributes.logo?.data?.attributes?.url || "";
 
-                const title = attributes.title;
-                const description = attributes.Description;
-                const logo = attributes.logo;
-                console.log("Products logo ", logo.data.attributes.url);
-                const logoUrl = logo.data.attributes.url || "";
-                return (
-                  <div
-                    key={product.id}
-                    className=" rounded-[40px] bg-accent p-4 flex flex-col  mb-[80px] "
-                  >
+              const title = attributes.title;
+              const description = attributes.Description;
+              const logo = attributes.logo;
+              console.log("Products logo ", logo.data.attributes.url);
+              const logoUrl = logo.data.attributes.url || "";
+              return (
+                // <div
+                //   key={product.id}
+                //className=" rounded-[40px] bg-accent p-4 flex flex-col  mb-[80px] "
+                // >
+                <div
+                  key={product.id}
+                  className="w-full px-4 md:w-1/2 lg:w-1/3 "
+                >
+                  <div className="mb-9 rounded-[20px] bg-accent dark:bg-dark-2  p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10">
                     <div className="h-[120px] relative">
                       <Image
                         className="max-w-[100%] h-[100%]  "
@@ -121,12 +126,15 @@ export default async function Page() {
                       </a>
                     </div>
                   </div>
-                );
-              })
-            ) : (
-              <p className="text-white text-center">No products available.</p>
-            )}
-          </div>
+                </div>
+              );
+            })
+          ) : (
+            <p className="text-white text-center">
+              Pas de produits disponible.
+            </p>
+          )}
+          {/* </div> */}
         </div>
       </section>
     </div>
