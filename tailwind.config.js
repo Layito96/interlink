@@ -6,6 +6,13 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      sm: '576px',   // Small devices (phones)
+      md: '768px',   // Medium devices (tablets)
+      lg: '992px',  // Large devices (desktops)
+      xl: '1200px',  // Extra large devices (larger desktops)
+      '2xl': '1400px' // Double extra large (extra-wide screens)
+    },
     fontFamily: {
       primary: "Tajawal",
       secondary: "Jost",

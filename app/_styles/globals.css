@@ -125,7 +125,7 @@ p {
   @apply shadow-lg bg-accent-tertiary;
 }
 .package-name {
-  @apply text-blue-600 font-bold uppercase text-sm;
+  @apply text-accent-hover font-bold uppercase text-sm;
 }
 
 .form-input {

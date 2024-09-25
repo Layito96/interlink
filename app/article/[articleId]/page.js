@@ -75,7 +75,7 @@ async function page({ params }) {
           </div>
 
           <div className="container mt-5 px-[20rem]">
-            <div className="shadow-md flex text-justify lg:px-[20rem] gap-8 py-10 px-8 md:px-10 rounded border border-accent">
+            <div className="shadow-md flex text-justify px-2 gap-8 py-10  md:px-10 rounded border border-accent">
               <div className="w-3/4 text-justify-center">
                 <div className="text-gray-600 leading-loose ">
                   {article.attributes.content &&

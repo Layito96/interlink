@@ -37,20 +37,21 @@ function Header() {
         </video>
         <div className="relative max-w-screen-xl mx-auto grid grid-cols-12 gap-x-6 overflow-hidden z-10">
           <div className="col-span-12 lg:col-span-6 mt-12 xl:mt-10 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
-            <h1
-              data-aos="fade-right"
-              data-aos-once="true"
-              className="text-[2.5rem] sm:text-3xl xl:text-4xl uppercase font-bold leading-tight sm:pr-8 xl:pr-10"
-            >
-              <span className="text-header-gradient"> INTERLINK</span> votre
-              partenaire digital pour des solutions logicielles innovantes,
-              propulsées par l&apos;intelligence artificielle
-            </h1>
+          <h1
+  data-aos="fade-right"
+  data-aos-once="true"
+  className="lg:text-[2.5rem] md:text-[2.5rem] text-[1.5rem]  xl:text-4xl uppercase font-bold leading-tight sm:pr-8 xl:pr-10"
+>
+  <span className="text-header-gradient">INTERLINK</span> votre partenaire
+  digital pour des solutions logicielles innovantes, propulsées par l'intelligence
+  artificielle
+</h1>
+
             <p
               data-aos="fade-down"
               data-aos-once="true"
               data-aos-delay="300"
-              className="paragraph hidden sm:block"
+              className="paragraph  block"
             >
               Depuis 15 ans, INTERLINK conçoit des solutions digitales sur
               mesure pour les entreprises et les institutions...
@@ -80,7 +81,7 @@ function Header() {
                 priority
                 src={robot2}
                 alt=""
-                className="-mt-4 h-[30rem] lg:float-right relative sm:mx-auto z-10"
+                className="-mt-4 h-[30rem] lg:float-right relative sm:mx-auto z-10 hidden lg:block md:block"
               />
             </div>
           </div>
