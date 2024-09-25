@@ -153,12 +153,12 @@ function page() {
         <div className="container mx-auto text-center">
           <div className="mb-8">
             {/* Title and Description */}
-            <h4 className="text-2xl font-semibold text-gray-800">
+            <h4 className="text-2xl font-semibold text-gray-800 ">
               Le mode hébergé &quot;SaaS&quot;
             </h4>
-            <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
-              Notre <strong>mode d’hébergement SaaS</strong> propose un accès{" "}
-              <strong>immédiat</strong> et <strong>sécurisé</strong> à{" "}
+            <p className="mt-4 text-gray-600 max-w-3xl mx-auto text-center">
+              Notre <strong>mode d’hébergement SaaS</strong> propose un accès
+              <strong>immédiat</strong> et <strong>sécurisé</strong> à
               <strong>CentralBill</strong> directement en ligne, éliminant ainsi
               la nécessité d’installations locales complexes. Cette approche
               offre une multitude d’avantages significatifs pour optimiser votre
@@ -179,7 +179,7 @@ function page() {
                       src={Facilitedacces}
                       alt="Accessibilité et Mobilité"
                       className="object-cover"
-                      //   className="w-64 h-64 mx-auto"
+                    //   className="w-64 h-64 mx-auto"
                     />
                   </div>
                   <div className="mb-3">
@@ -208,7 +208,7 @@ function page() {
                       src={Miseajour}
                       alt="Simplicité Opérationnelle"
                       className="object-cover"
-                      //   className="w-64 h-64 mx-auto"
+                    //   className="w-64 h-64 mx-auto"
                     />
                   </div>
                   <div className="mb-3">
@@ -236,7 +236,7 @@ function page() {
                       src={Evolutivite}
                       alt="Économies de Coûts et Évolutivité"
                       className="object-cover"
-                      //   className="w-64 h-64 mx-auto"
+                    //   className="w-64 h-64 mx-auto"
                     />
                   </div>
                   <div className="mb-3">
@@ -263,19 +263,19 @@ function page() {
         </div>
       </section>
       <section className="py-12 bg-gray-50">
+
         <div className="container mx-auto text-center">
-          <h5 className="text-3xl font-semibold text-gray-800 mb-6">
-            Le mode local &quot;On-Premise&quot;
-          </h5>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="col-span-1 md:col-span-2">
-              <p className="text-gray-600 leading-relaxed">
-                Intégrée directement sur vos serveurs, la solution CentralBill
-                sous le mode d’hébergement On-Premise vous permettra d’assurer
-                un contrôle total sur la passerelle en étant assistés par nos
-                experts. Ce mode présente également des bénéfices.
-              </p>
-            </div>
+          <div className="mb-8">
+            {/* Title and Description */}
+            <h4 className="text-2xl font-semibold text-gray-800 ">
+              Le mode local &quot;On-Premise&quot;
+            </h4>
+            <p className="mt-4 text-gray-600 max-w-3xl mx-auto text-center">
+              Intégrée directement sur vos serveurs, la solution CentralBill
+              sous le mode d’hébergement On-Premise vous permettra d’assurer
+              un contrôle total sur la passerelle en étant assistés par nos
+              experts. Ce mode présente également des bénéfices.
+            </p>
           </div>
 
           <div className="container">
@@ -289,7 +289,7 @@ function page() {
                       src={Personnalisationapprofondie}
                       alt="Personnalisation approfondie"
                       className="object-cover"
-                      //   className="w-64 h-64 mx-auto"
+                    //   className="w-64 h-64 mx-auto"
                     />
                   </div>
                   <div className="mb-3">
@@ -319,7 +319,7 @@ function page() {
                       src={ContrOLetotal}
                       alt="Contrôle total"
                       className="object-cover"
-                      //   className="w-64 h-64 mx-auto"
+                    //   className="w-64 h-64 mx-auto"
                     />
                   </div>
                   <div className="mb-3">
@@ -346,7 +346,7 @@ function page() {
                       src={Securitedesdonnees}
                       alt="Personnalisation approfondie"
                       className="object-cover"
-                      //   className="w-64 h-64 mx-auto"
+                    //   className="w-64 h-64 mx-auto"
                     />
                   </div>
                   <div className="mb-3">
@@ -376,10 +376,9 @@ function page() {
                 Tarification
               </h2>
 
-              {/* Divider */}
+
               <hr className="my-4 border-t border-gray-300" />
 
-              {/* Text Content */}
               <p className="text-lg mb-4">
                 Notre tarification sur mesure,
                 <br />
@@ -389,7 +388,7 @@ function page() {
                 {/* Button */}
                 <Link
                   href="/"
-                  className="inline-block bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition"
+                  className="inline-block bg-primary text-white px-6 py-2 rounded-md hover:bg-accent-hover transition"
                 >
                   Contactez-nous dès maintenant
                 </Link>
@@ -397,7 +396,7 @@ function page() {
                 {/* Icon */}
                 <Link
                   href="#"
-                  className="back-to-top w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white text-lg z-20 duration-300 hover:bg-blue-400"
+                  className="back-to-top w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white text-lg z-20 duration-300 hover:bg-accent-hover transition"
                 >
                   <i className="lni lni-arrow-right"></i>
                 </Link>
