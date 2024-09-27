@@ -19,6 +19,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "priv-web-nomeo-prod.apnl.ws", // Added this line
       },
+      {
+        protocol: "https",
+        hostname: "source.unsplash.com", // Added this line
+      },{
+        protocol: "https",
+        hostname: "images.unsplash.com", // Added this line
+      },
+      
     ],
   },
 };

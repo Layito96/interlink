@@ -81,8 +81,9 @@ function Testimonial() {
                               <Cards>
                                 <CardContents className="text-center py-10 px-8 md:px-10 rounded border border-gray-900">
                                   <p className="text-gray-600 leading-loose">
+                                    <span className="text-6xl text-accent-hover">“</span>
                                     {attributes.commentary}
-                                  </p>
+                                    <span className="text-6xl text-accent-hover" style={{ float: 'right' }}>”</span>                                  </p>
                                   <div className="my-3 mx-auto w-24 h-24 shadow-md rounded-full relative">
                                     <Image
                                       fill
@@ -108,7 +109,7 @@ function Testimonial() {
                       })
                     ) : (
                       <p className="text-white text-center">
-                        No products available.
+                        Aucun témoignage disponible.
                       </p>
                     )}
                   </CarouselContent>
