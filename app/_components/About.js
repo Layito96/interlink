@@ -11,9 +11,18 @@ import {
 } from "./ui/card";
 
 import { getWorks } from "../_lib/data-services";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "./ui/navigation-menu";
 
 function About({ Works }) {
-  console.log("donnees works", Works);
   // tabs state
   const [activeTab, setActiveTab] = useState("engineering");
 
@@ -131,7 +140,7 @@ function About({ Works }) {
         </Cards>
       </div>
       {/* tabs end */}
-
+      {/* 
       <Cards className="flex w-full flex-col p-4 md:p-6">
         <div className="relative">
           <div className="mt-4">
@@ -173,8 +182,8 @@ function About({ Works }) {
               </div>
               //   {/* </CardBody>
               // </Card> */}
-            )}
-            {activeTab === "training" && (
+      {/* )} */}
+      {/* {activeTab === "training" && (
               // <Card className="mb-4 shadow-md">
               //   <CardBody>
               <div>
@@ -195,11 +204,11 @@ function About({ Works }) {
                   Investir dans les nouvelles technologies Investir dans les
                   ressources humaines
                 </div>
-              </div>
-              //   {/* </CardBody>
+              </div> */}
+      {/* </CardBody>
               // </Card> */}
-            )}
-          </div>
+      {/* )} */}
+      {/* </div>
           <Cards className="mt-[20px] m-[-8px] mb-[31px] pt-[14px] pl-[16px] pr-[16px] pb-[16px] bg-white rounded-[16px]">
             <div
               onMouseEnter={() => handleHover("engineering")}
@@ -232,8 +241,18 @@ function About({ Works }) {
               Formation
             </div>
           </Cards>
-        </div>
-      </Cards>
+        </div> */}
+      {/* {/* </Cards> */}
+      <NavigationMenu>
+        <NavigationMenuList>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <NavigationMenuLink>Link</NavigationMenuLink>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
     </div>
   );
 }

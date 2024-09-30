@@ -22,11 +22,13 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "source.unsplash.com", // Added this line
-      },{
+        pathname: "/**",
+      },
+      {
         protocol: "https",
         hostname: "images.unsplash.com", // Added this line
+        pathname: "/**",
       },
-      
     ],
   },
 };
