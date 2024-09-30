@@ -17,6 +17,7 @@ module.exports = {
       primary: "Tajawal",
       secondary: "Jost",
       slogan: "JetBrains Mono",
+      sora: "Sora",
     },
 
     extend: {

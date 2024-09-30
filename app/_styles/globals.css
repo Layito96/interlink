@@ -17,7 +17,7 @@
 
 body {
   /* font-family: 'Montserrat', sans-serif; */
-  @apply font-primary;
+  @apply font-sora;
 }
 p {
   @apply text-gray-600;
@@ -222,16 +222,19 @@ p {
 }
 
 .text-header-gradient {
-  background: #3984f4;
+  @apply !font-sora bg-primary;
+  
+  /* background: #3984f4; */
   background: linear-gradient(
-    169.4deg,
-    #3984f4 -6.01%,
+    100.4deg,
+    #14315b 20.01%,
     #1b454e 36.87%,
     #f77b0b 78.04%,
-    #0e65e8 103.77%
+    #4b62b3 103.77%
   );
   -webkit-background-clip: text;
   background-clip: text;
+ 
   -webkit-text-fill-color: transparent;
 }
 #hero-area {
