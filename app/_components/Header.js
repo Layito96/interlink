@@ -37,15 +37,15 @@ function Header() {
         </video>
         <div className="relative max-w-screen-xl mx-auto grid grid-cols-12 gap-x-6 overflow-hidden z-10">
           <div className="col-span-12 lg:col-span-6 mt-12 xl:mt-10 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
-          <h1
-  data-aos="fade-right"
-  data-aos-once="true"
-  className="lg:text-[2.5rem] md:text-[2.5rem] text-[1.5rem]  xl:text-4xl uppercase font-bold leading-tight sm:pr-8 xl:pr-10"
->
-  <span className="text-header-gradient">INTERLINK</span> votre partenaire
-  digital pour des solutions logicielles innovantes, propulsées par l&apos;intelligence
-  artificielle
-</h1>
+            <h1
+              data-aos="fade-right"
+              data-aos-once="true"
+              className="lg:text-[2.5rem] md:text-[2.5rem] text-[1.5rem]  xl:text-4xl uppercase font-bold leading-tight sm:pr-8 xl:pr-10"
+            >
+              <span className="text-header-gradient">INTERLINK</span> votre
+              partenaire digital pour des solutions logicielles innovantes,
+              propulsées par l&apos;intelligence artificielle
+            </h1>
 
             <p
               data-aos="fade-down"
@@ -77,6 +77,7 @@ function Header() {
               <Image
                 data-aos="fade-up"
                 data-aos-once="true"
+                // placeholder="blur"
                 // placeholder="blur"
                 priority
                 src={robot2}

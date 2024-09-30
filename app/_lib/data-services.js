@@ -215,7 +215,7 @@ export async function getAbout() {
 
 export async function getWorks() {
   try {
-    const url = `${BASE_URL}/works${POPULATE_PARAMAS}`;
+    const url = `${BASE_URL}/Works${POPULATE_PARAMAS}`;
 
     const response = await fetch(url, {
       method: "GET",
