@@ -71,15 +71,16 @@ function Products() {
                 <div className="w-16 h-1 rounded-full bg-primary-hover inline-flex"></div>
               </div>
             </div>
-            <Swiper
+            <Swiper 
+            className="w-full"
               // install Swiper modules
               modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-              spaceBetween={30}
+              spaceBetween={20}
               slidesPerView={3}
-              // navigation
+              navigation
               pagination={{ clickable: true }}
               scrollbar={{ draggable: true }}
-              autoplay={{ delay: 2000, disableOnInteraction: false }}
+              // autoplay={{ delay: 2000, disableOnInteraction: false }}
               // onSwiper={(swiper) => console.log(swiper)}
               //onSlideChange={() => console.log('slide change')}
               parallax={true}
@@ -106,7 +107,7 @@ function Products() {
                       attributes.logo?.data?.attributes?.url || "";
 
                     return (
-                      <SwiperSlide key={product.id}>
+                      <SwiperSlide key={product.id} >
                         <div
                           className="group project__container  mx-auto"
                           key={product.id}

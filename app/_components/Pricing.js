@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Facilitedacces from "@/public/assets/img/pricing/1-Facilite-dacces.png";
-import Miseajour from "@/public/assets/img/pricing/3-Mise-a-jour.png";
-import Evolutivite from "@/public/assets/img/pricing/2-Evolutivite.png";
+import Facilitedacces from "@/public/assets/img/pricing/1-Facilite-dacces-primary.png";
+import Miseajour from "@/public/assets/img/pricing/3-Mise-a-jour-primary.png";
+import Evolutivite from "@/public/assets/img/pricing/2-Evolutivite-primary.png";
 import Personnalisationapprofondie from "@/public/assets/img/pricing/4-Personnalisation-approfondie.png";
 import ContrOLetotal from "@/public/assets/img/pricing/5-ContrOLe-total.png";
 import Securitedesdonnees from "@/public/assets/img/pricing/6-Securite-des-donnees.png";
@@ -39,7 +39,7 @@ function Pricing() {
             {/* <!-- single pricing table starts --> */}
             {/* Accessibilité et Mobilité */}
             <div className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3">
-              <div className="pricing-box">
+              <div className="pricing-box !rounded-[20px]">
                 <div className="w-2/5 mx-auto text-center relative">
                   <Image
                     src={Facilitedacces}
@@ -68,7 +68,7 @@ function Pricing() {
             {/* <!-- single pricing table starts --> */}
             {/* Simplicité Opérationnelle */}
             <div className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3">
-              <div className="pricing-box !bg-blue-100">
+              <div className="pricing-box !bg-blue-100 !rounded-[20px] !border">
                 <div className="w-2/5 mx-auto text-center relative">
                   <Image
                     src={Miseajour}
@@ -96,7 +96,7 @@ function Pricing() {
             {/* <!-- single pricing table starts --> */}
             {/* Économies de Coûts et Évolutivité */}
             <div className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3">
-              <div className="pricing-box">
+              <div className="pricing-box !rounded-[20px]">
                 <div className="w-2/5 mx-auto text-center relative">
                   <Image
                     src={Evolutivite}
