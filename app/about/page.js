@@ -329,8 +329,8 @@ export default async function Page() {
             <div className="lg:w-1/2">
               <p className="text-lg">
                 Notre agence lyonnaise collabore avec des clients répartis sur
-                la France entière, ainsi qu'à l'international. La distance n'est
-                jamais une difficulté.
+                la France entière, ainsi qu&apos;à l&apos;international. La
+                distance n&apos;est jamais une difficulté.
               </p>
             </div>
           </div>
@@ -359,7 +359,7 @@ export default async function Page() {
               <p className="text-lg">
                 Depuis 2010, notre équipe fait grandir son savoir-faire et son
                 expertise en transformation numérique, innovation digitale,
-                ainsi qu’en maîtrise d’app critique et à fort trafic.
+                ainsi qu&apos;en maîtrise d&apos;app critique et à fort trafic.
               </p>
             </div>
           </div>
