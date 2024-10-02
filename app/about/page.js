@@ -351,7 +351,7 @@ export default async function Page() {
                     <p className="text-5xl font-bold">14</p>
                     <p className="text-xl">ans</p>
                   </div>
-                  <p className="text-xl">d'expérience</p>
+                  <p className="text-xl">d&apos;expérience</p>
                 </div>
               </div>
             </div>
