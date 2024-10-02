@@ -3,6 +3,10 @@ import { getAbout, getWorks } from "../_lib/data-services";
 import Image from "next/image";
 import About from "../_components/About";
 import viewbg from "@/public/assets/img/viewm.jpg";
+import firebaseLogo from "@/public/assets/img/firebase-logo.png";
+import proj from "@/public/assets/img/proj.jpg";
+import collab from "@/public/assets/img/collab.jpg";
+import team from "@/public/assets/img/team.jpg";
 import {
   Card,
   CardContent,
@@ -29,7 +33,7 @@ export default async function Page() {
 
   return (
     <>
-      <section className="h-screen pb-50 relative overflow-hidden">
+      <section className="h-[50vh] pb-50 relative overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -53,7 +57,7 @@ export default async function Page() {
 
       {/* <About Works={works} /> */}
 
-      <section className="mb-32 container mx-auto">
+      <section className="my-32 container mx-auto">
         <div className="flex flex-col lg:flex-row">
           {/* Left column with text */}
           <div className="lg:w-1/2">
@@ -196,17 +200,134 @@ export default async function Page() {
             )}
             {/* fin */}
           </div>
-
           {/* Right column with image */}
-          <div className="hidden lg:block lg:w-1/2 text-right">
+          <div className="hidden lg:flex lg:w-1/2 justify-center ">
             <div className="inline-block">
               <Image
                 src={fullImageUrl}
                 alt="Interlink Logo Animation"
                 width={500}
                 height={300}
-                className="hover:scale-110 transition-transform duration-300 text-center"
+                className="hover:scale-110 transition-transform duration-300"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto mb-32 max-w-7xl">
+        <h2 className="text-4xl font-bold text-blue-600 mb-12 text-center">
+          Nos chiffres clés
+        </h2>
+        <div className="space-y-12">
+          {/* First KPI */}
+          <div className="flex flex-col lg:flex-row-reverse items-center lg:justify-between">
+            <div className="mb-5 lg:mb-0 flex justify-center lg:w-1/2">
+              <div className="flex items-center space-x-4 hover:scale-105 transition-transform">
+                <Image
+                  src={proj}
+                  alt=""
+                  width="64"
+                  height="64"
+                  className="w-16 h-16"
+                />
+                <div>
+                  <p className="text-5xl font-bold">20</p>
+                  <p className="text-xl">experts</p>
+                </div>
+              </div>
+            </div>
+            <div className="lg:w-1/2">
+              <p className="text-lg">
+                INTERLINK s&apos;appuie sur des équipes locales hautement
+                qualifiées qui conçoivent, développent et déploient des
+                solutions personnalisées.
+              </p>
+            </div>
+          </div>
+
+          {/* Second KPI */}
+          <div className="flex flex-col lg:flex-row items-center lg:justify-between">
+            <div className="mb-5 lg:mb-0 flex justify-center lg:w-1/2">
+              <div className="flex items-center space-x-4 hover:scale-105 transition-transform">
+                <Image
+                  src={proj}
+                  alt=""
+                  width="64"
+                  height="64"
+                  className="w-16 h-16"
+                />
+                <div>
+                  <div className="flex items-end space-x-1">
+                    <p className="text-5xl font-bold">14</p>
+                    <p className="text-xl">ans</p>
+                  </div>
+                  <p className="text-xl">
+                    Depuis sa création, INTERLINK s&apos;est imposée comme un
+                    leader dans les solutions numériques, offrant des services
+                    en e-gouvernance, e-santé, et plus.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="lg:w-1/2">
+              <p className="text-lg">
+                Depuis 2010, notre équipe fait grandir son savoir-faire et son
+                expertise en transformation numérique, innovation digitale,
+                ainsi qu&apos;en maîtrise d&apos;app critique et à fort trafic.
+              </p>
+            </div>
+          </div>
+
+          {/* Third KPI */}
+          <div className="flex flex-col lg:flex-row-reverse items-center lg:justify-between">
+            <div className="mb-5 lg:mb-0 flex justify-center lg:w-1/2">
+              <div className="flex items-center space-x-4 hover:scale-105 transition-transform">
+                <Image
+                  src={collab}
+                  alt=""
+                  width="64"
+                  height="64"
+                  className="w-16 h-16"
+                />
+                <div>
+                  <p className="text-5xl font-bold">6</p>
+                  <p className="text-xl">domaines d&apos;expertise</p>
+                </div>
+              </div>
+            </div>
+            <div className="lg:w-1/2">
+              <p className="text-lg">
+                E-Gouvernance, E-Santé, Développement, Messagerie, Géoservices
+                et Cybersécurité, avec des solutions innovantes pour les
+                entreprises et les institutions.
+              </p>
+            </div>
+          </div>
+
+          {/* Fourth KPI */}
+          <div className="flex flex-col lg:flex-row items-center lg:justify-between">
+            <div className="mb-5 lg:mb-0 flex justify-center lg:w-1/2">
+              <div className="flex items-center space-x-4 hover:scale-105 transition-transform">
+                <Image
+                  src={team}
+                  alt=""
+                  width="64"
+                  height="64"
+                  className="w-16 h-16"
+                />
+                <div>
+                  <p className="text-5xl font-bold">Partenariats avec</p>
+                  <p className="text-xl">des leaders mondiaux</p>
+                </div>
+              </div>
+            </div>
+            <div className="lg:w-1/2">
+              <p className="text-lg">
+                Grâce à des partenariats solides, INTERLINK est à la pointe des
+                innovations, garantissant des solutions évolutives et adaptées à
+                chaque client.
+              </p>
             </div>
           </div>
         </div>
@@ -304,119 +425,6 @@ export default async function Page() {
         </Tabs>
       </Card>
       {/* § */}
-      <section className="mx-auto mb-32 max-w-7xl">
-        <h2 className="text-4xl font-bold text-blue-600 mb-12 text-center">
-          Nos chiffres clés
-        </h2>
-        <div className="space-y-12">
-          {/* First KPI */}
-          <div className="flex flex-col lg:flex-row-reverse items-center lg:justify-between">
-            <div className="mb-5 lg:mb-0 flex justify-center lg:w-1/2">
-              <div className="flex items-center space-x-4 hover:scale-105 transition-transform">
-                <img
-                  src="/images/icon-experts.svg"
-                  alt=""
-                  width="64"
-                  height="64"
-                  className="w-16 h-16"
-                />
-                <div>
-                  <p className="text-5xl font-bold">20</p>
-                  <p className="text-xl">experts</p>
-                </div>
-              </div>
-            </div>
-            <div className="lg:w-1/2">
-              <p className="text-lg">
-                Notre agence lyonnaise collabore avec des clients répartis sur
-                la France entière, ainsi qu&apos;à l&apos;international. La
-                distance n&apos;est jamais une difficulté.
-              </p>
-            </div>
-          </div>
-
-          {/* Second KPI */}
-          <div className="flex flex-col lg:flex-row items-center lg:justify-between">
-            <div className="mb-5 lg:mb-0 flex justify-center lg:w-1/2">
-              <div className="flex items-center space-x-4 hover:scale-105 transition-transform">
-                <img
-                  src="/images/icon-experience.svg"
-                  alt=""
-                  width="64"
-                  height="64"
-                  className="w-16 h-16"
-                />
-                <div>
-                  <div className="flex items-end space-x-1">
-                    <p className="text-5xl font-bold">14</p>
-                    <p className="text-xl">ans</p>
-                  </div>
-                  <p className="text-xl">d&apos;expérience</p>
-                </div>
-              </div>
-            </div>
-            <div className="lg:w-1/2">
-              <p className="text-lg">
-                Depuis 2010, notre équipe fait grandir son savoir-faire et son
-                expertise en transformation numérique, innovation digitale,
-                ainsi qu&apos;en maîtrise d&apos;app critique et à fort trafic.
-              </p>
-            </div>
-          </div>
-
-          {/* Third KPI */}
-          <div className="flex flex-col lg:flex-row-reverse items-center lg:justify-between">
-            <div className="mb-5 lg:mb-0 flex justify-center lg:w-1/2">
-              <div className="flex items-center space-x-4 hover:scale-105 transition-transform">
-                <img
-                  src="/images/icon-application.svg"
-                  alt=""
-                  width="64"
-                  height="64"
-                  className="w-16 h-16"
-                />
-                <div>
-                  <p className="text-5xl font-bold">+100</p>
-                  <p className="text-xl">apps actives</p>
-                </div>
-              </div>
-            </div>
-            <div className="lg:w-1/2">
-              <p className="text-lg">
-                Notre implication avec nos clients sur le long terme constitue
-                un gage de qualité et de confiance. Une relation bienveillante à
-                entretenir.
-              </p>
-            </div>
-          </div>
-
-          {/* Fourth KPI */}
-          <div className="flex flex-col lg:flex-row items-center lg:justify-between">
-            <div className="mb-5 lg:mb-0 flex justify-center lg:w-1/2">
-              <div className="flex items-center space-x-4 hover:scale-105 transition-transform">
-                <img
-                  src="/images/icon-downloads.svg"
-                  alt=""
-                  width="64"
-                  height="64"
-                  className="w-16 h-16"
-                />
-                <div>
-                  <p className="text-5xl font-bold">10M</p>
-                  <p className="text-xl">de téléchargements</p>
-                </div>
-              </div>
-            </div>
-            <div className="lg:w-1/2">
-              <p className="text-lg">
-                Vous avez un projet ambitieux ? Critique pour votre entreprise ?
-                Nous vous partagerons notre expérience et nous nous adaptons à
-                vos contraintes toujours pour le bien de votre projet.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
