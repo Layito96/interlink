@@ -1,5 +1,5 @@
-// const BASE_URL = "http://localhost:1338/api";
-const BASE_URL = "https://cms-interlink.onrender.com/api";
+const BASE_URL = "http://localhost:1338/api";
+// const BASE_URL = "https://cms-interlink.onrender.com/api";
 
 const POPULATE_PARAMAS = "?populate=*&pagination[pageSize]=10";
 // const POPULATE_PARAMAS = "?populate=*&pagination[pageSize]=10";

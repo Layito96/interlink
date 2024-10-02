@@ -29,6 +29,11 @@ const nextConfig = {
         hostname: "images.unsplash.com", // Added this line
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "www.nomeo.fr", // Added this line
+        pathname: "/**",
+      },
     ],
   },
 };

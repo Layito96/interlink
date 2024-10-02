@@ -61,7 +61,6 @@ export default async function Page() {
               const title = attributes.title;
               const description = attributes.Description;
               const logo = attributes.logo;
-              console.log("Products logo ", logo.data.attributes.url);
               const logoUrl = logo.data.attributes.url || "";
               return (
                 // <div

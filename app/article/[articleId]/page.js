@@ -13,7 +13,6 @@ import { formatDate } from "@/app/_utiles/formatDate";
 async function page({ params }) {
   const articleData = await getArticle(params.articleId);
   const article = articleData.data;
-  console.log("article d", article.attributes.content);
   const imageUrl = article.attributes.image?.data?.attributes?.url || "";
   // const fullImageUrl = `http://localhost:1338${imageUrl}`;
   const fullImageUrl = `https://cms-interlink.onrender.com${imageUrl}`;
