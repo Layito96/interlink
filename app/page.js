@@ -18,7 +18,7 @@ export default function Home() {
       <Services />
       <Pricing />
       <Products />
-      <Feature />
+      {/* <Feature /> */}
       <ArticleCard />
       <Reference />
       <Values />

@@ -61,7 +61,7 @@ export default async function Page() {
         <div className="flex flex-col lg:flex-row">
           {/* Left column with text */}
           <div className="lg:w-1/2">
-            <h2 className="text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="title-font text-primary mb-4 text-xl font-bold leading-10 tracking-tight sm:text-5xl">
               Notre histoire
             </h2>
 
@@ -216,7 +216,7 @@ export default async function Page() {
       </section>
 
       <section className="mx-auto mb-32 max-w-7xl">
-        <h2 className="text-4xl font-bold text-blue-600 mb-12 text-center">
+        <h2 className="title-font text-primary mb-4 text-xl font-bold leading-10 tracking-tight sm:text-5xl text-center">
           Nos chiffres clés
         </h2>
         <div className="space-y-12">
@@ -227,9 +227,9 @@ export default async function Page() {
                 <Image
                   src={proj}
                   alt=""
-                  width="64"
-                  height="64"
-                  className="w-16 h-16"
+                  width={280}
+                  height={180}
+                  // className="w-16 h-16"
                 />
                 <div>
                   <p className="text-5xl font-bold">20</p>
@@ -253,28 +253,23 @@ export default async function Page() {
                 <Image
                   src={proj}
                   alt=""
-                  width="64"
-                  height="64"
-                  className="w-16 h-16"
+                  width={280}
+                  height={180}
+                  // className="w-16 h-16"
                 />
                 <div>
                   <div className="flex items-end space-x-1">
                     <p className="text-5xl font-bold">14</p>
                     <p className="text-xl">ans</p>
                   </div>
-                  <p className="text-xl">
-                    Depuis sa création, INTERLINK s&apos;est imposée comme un
-                    leader dans les solutions numériques, offrant des services
-                    en e-gouvernance, e-santé, et plus.
-                  </p>
                 </div>
               </div>
             </div>
             <div className="lg:w-1/2">
               <p className="text-lg">
-                Depuis 2010, notre équipe fait grandir son savoir-faire et son
-                expertise en transformation numérique, innovation digitale,
-                ainsi qu&apos;en maîtrise d&apos;app critique et à fort trafic.
+                Depuis sa création, INTERLINK s&apos;est imposée comme un leader
+                dans les solutions numériques, offrant des services en
+                e-gouvernance, e-santé, et plus.
               </p>
             </div>
           </div>
@@ -286,9 +281,9 @@ export default async function Page() {
                 <Image
                   src={collab}
                   alt=""
-                  width="64"
-                  height="64"
-                  className="w-16 h-16"
+                  width={280}
+                  height={180}
+                  // className="w-16 h-16"
                 />
                 <div>
                   <p className="text-5xl font-bold">6</p>
@@ -312,9 +307,9 @@ export default async function Page() {
                 <Image
                   src={team}
                   alt=""
-                  width="64"
-                  height="64"
-                  className="w-16 h-16"
+                  width={280}
+                  height={180}
+                  // className="w-16 h-16"
                 />
                 <div>
                   <p className="text-5xl font-bold">Partenariats avec</p>

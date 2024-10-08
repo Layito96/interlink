@@ -1,11 +1,42 @@
 "use client";
+import React from "react";
 import Link from "next/link";
 
-import { useEffect } from "react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "./ui/navigation-menu";
+import { cn } from "@/app/_lib/utils";
 
 import Image from "next/image";
 import newlogoInterlink from "/public/newlogoInterlink.svg";
 function Navbar() {
+  const [openMenu, setOpenMenu] = React.useState(false);
+
+  const toggleMenu = () => {
+    setOpenMenu(!openMenu);
+  };
+  // const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const menuItems = [
+    "Profile",
+    "Dashboard",
+    "Activity",
+    "Analytics",
+    "System",
+    "Deployments",
+    "My Settings",
+    "Team Settings",
+    "Help & Feedback",
+    "Log Out",
+  ];
   return (
     <header id="header-wrap" className="relative bg-accent">
       {/* <!-- Navbar Start --> */}
@@ -49,7 +80,7 @@ function Navbar() {
                   <Link className="page-scroll" href="/services">
                     Services
                   </Link>
-                </li>
+                </li>{" "}
                 <li className="nav-item">
                   <Link className="page-scroll" href="/pricing">
                     Nos Offres
@@ -89,6 +120,7 @@ function Navbar() {
           </nav>
         </div>
       </div>
+
       {/* <!-- Navbar End --> */}
     </header>
   );
