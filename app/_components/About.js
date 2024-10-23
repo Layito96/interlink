@@ -11,16 +11,6 @@ import {
 } from "./ui/card";
 
 import { getWorks } from "../_lib/data-services";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "./ui/navigation-menu";
 
 function About({ Works }) {
   // tabs state
@@ -243,16 +233,6 @@ function About({ Works }) {
           </Cards>
         </div> */}
       {/* {/* </Cards> */}
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <NavigationMenuLink>Link</NavigationMenuLink>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
     </div>
   );
 }

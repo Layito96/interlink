@@ -20,7 +20,6 @@ export async function getMembers() {
     }
 
     const data = await response.json();
-    //console.log(data); // You can remove this in production
 
     return data;
   } catch (error) {
@@ -49,7 +48,6 @@ export async function getTestimonials() {
     }
 
     const data = await response.json();
-    //console.log(data); // You can remove this in production
 
     return data;
   } catch (error) {
