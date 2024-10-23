@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { getProducts } from "../_lib/data-services";
-import BASE_URL from "../_utiles/constants";
+import { STRAPI_URL } from "../_lib/utils";
 
 export default async function Page() {
   const productsData = await getProducts();
@@ -40,9 +39,6 @@ export default async function Page() {
               </em>
               &nbsp;
             </h1>
-            {/* <div className="text-[#9eb8e9] tracking-[3.32px] uppercase mt-0 mb-0 font-gabarito text-[20px] font-normal leading-[120%] no-underline">
-              <Link href="/products/1"> AMNIR Tracking</Link>
-            </div> */}
           </div>
         </div>
       </section>
@@ -72,7 +68,7 @@ export default async function Page() {
                     <div className="h-[120px] relative">
                       <Image
                         className="max-w-[100%] h-[100%]  "
-                        src={BASE_URL + logoUrl}
+                        src={STRAPI_URL + logoUrl}
                         alt={"lazy"}
                         // fill
                         width={120}
