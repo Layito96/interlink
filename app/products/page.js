@@ -1,10 +1,7 @@
 import Image from "next/image";
-import ing from "@/public/ing.svg";
-import amnirtracking from "@/public/assets/img/projects/amnirtrack.png";
 import Link from "next/link";
 import { getProducts } from "../_lib/data-services";
 import BASE_URL from "../_utiles/constants";
-// import { BASE_URL } from "../_utiles/constants";
 
 export default async function Page() {
   const productsData = await getProducts();

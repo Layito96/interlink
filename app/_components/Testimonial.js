@@ -23,6 +23,7 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 import { Card as Cards, CardContent as CardContents } from "./ui/card"; // Renommer ici
+import { STRAPI_URL } from "../_lib/utils";
 
 function Testimonial() {
   const [testimonials, setTestimonials] = useState([]);
@@ -81,14 +82,22 @@ function Testimonial() {
                               <Cards>
                                 <CardContents className="text-center py-10 px-8 md:px-10 rounded border border-gray-900">
                                   <p className="text-gray-600 leading-loose">
-                                    <span className="text-6xl text-accent-hover">“</span>
+                                    <span className="text-6xl text-accent-hover">
+                                      “
+                                    </span>
                                     {attributes.commentary}
-                                    <span className="text-6xl text-accent-hover" style={{ float: 'right' }}>”</span>                                  </p>
+                                    <span
+                                      className="text-6xl text-accent-hover"
+                                      style={{ float: "right" }}
+                                    >
+                                      ”
+                                    </span>{" "}
+                                  </p>
                                   <div className="my-3 mx-auto w-24 h-24 shadow-md rounded-full relative">
                                     <Image
                                       fill
                                       className="object-cover rounded-full p-2 w-full"
-                                      src={`https://cms-interlink.onrender.com${logoUrl}`}
+                                      src={`${STRAPI_URL}${logoUrl}`}
                                       alt=""
                                       sizes="(max-width: 768px) 100vw, 
                                 (max-width: 1200px) 50vw, 

@@ -16,6 +16,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 import { getReferences, getTestimonials } from "../_lib/data-services";
+import { STRAPI_URL } from "../_lib/utils";
 
 function Reference() {
   const [references, setReferences] = useState([]);
@@ -83,7 +84,7 @@ function Reference() {
                             width={300} // Specify the width of the image (used as a ratio)
                             height={200}
                             className="client-logo w-full h-auto"
-                            src={`https://cms-interlink.onrender.com${logoUrl}`}
+                            src={`${STRAPI_URL}${logoUrl}`}
                             alt={attributes.Name || "Client logo"}
                           />
                         </HoverCardTrigger>

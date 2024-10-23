@@ -1,21 +1,16 @@
 import React from "react";
 
 import Image from "next/image";
-import Link from "next/link";
-import newlogoInterlink from "@/public/assets/img/logo/newlogoInterlink.svg";
-import banner from "@/public/assets/img/banner.jpg";
-import viberLogo from "@/public/assets/img/viberLogo.svg";
-import robot2 from "/public/robot2.webp";
 import { getArticle } from "@/app/_lib/data-services";
 import ArticleCard from "@/app/_components/ArticleCard";
 import { formatDate } from "@/app/_utiles/formatDate";
+import { STRAPI_URL } from "@/app/_lib/utils";
 
 async function page({ params }) {
   const articleData = await getArticle(params.articleId);
   const article = articleData.data;
   const imageUrl = article.attributes.image?.data?.attributes?.url || "";
-  // const fullImageUrl = `http://localhost:1338${imageUrl}`;
-  const fullImageUrl = `https://cms-interlink.onrender.com${imageUrl}`;
+  const fullImageUrl = `${STRAPI_URL}${imageUrl}`;
 
   return (
     <div>

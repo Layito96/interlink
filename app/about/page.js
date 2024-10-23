@@ -21,6 +21,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/app/_components/ui/tabs";
+import { STRAPI_URL } from "../_lib/utils";
 
 export default async function Page() {
   const aboutsData = await getAbout();
@@ -29,7 +30,7 @@ export default async function Page() {
   const about = aboutsData?.data;
   const images = about?.attributes?.image?.data?.attributes;
   const imageUrl = about?.attributes?.image?.data?.attributes?.url || "";
-  const fullImageUrl = `https://cms-interlink.onrender.com${imageUrl}`;
+  const fullImageUrl = `${STRAPI_URL}${imageUrl}`;
 
   return (
     <>

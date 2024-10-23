@@ -15,6 +15,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
+import { STRAPI_URL } from "../_lib/utils";
 
 function Products() {
   const [members, setMembers] = useState([]);
@@ -71,8 +72,8 @@ function Products() {
                 <div className="w-16 h-1 rounded-full bg-primary-hover inline-flex"></div>
               </div>
             </div>
-            <Swiper 
-            className="w-full"
+            <Swiper
+              className="w-full"
               // install Swiper modules
               modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
               spaceBetween={20}
@@ -107,7 +108,7 @@ function Products() {
                       attributes.logo?.data?.attributes?.url || "";
 
                     return (
-                      <SwiperSlide key={product.id} >
+                      <SwiperSlide key={product.id}>
                         <div
                           className="group project__container  mx-auto"
                           key={product.id}
@@ -121,7 +122,7 @@ function Products() {
                               height="45"
                               decoding="async"
                               className=" h-[2.5rem] w-auto transition-all duration-[1500ms] group-hover:h-[2.5rem] lg:h-[3.82219rem]"
-                              src={`https://cms-interlink.onrender.com${logoUrl}`}
+                              src={`${STRAPI_URL}${logoUrl}`}
                               style={{ color: "transparent" }}
                             />
                             <p className="font-text text-[1.325rem] font-[500] leading-[2.25rem] md:text-[1.45rem] md:leading-[2.5rem] lg:font-[700] lg:leading-[2.5rem]">

@@ -1,8 +1,13 @@
-// const BASE_URL = "http://localhost:1338/api";
-const BASE_URL = "https://cms-interlink.onrender.com/api";
+import { STRAPI_URL } from "./utils";
 
+// BASE_URL is the URL of the Strapi API in development
+// const BASE_URL = "http://localhost:1338/api";
+
+// BASE_URL is the URL of the Strapi API in production
+const BASE_URL = `${STRAPI_URL}/api`;
+
+// POPULATE_PARAMAS is a query string that tells Strapi to populate all related data
 const POPULATE_PARAMAS = "?populate=*&pagination[pageSize]=10";
-// const POPULATE_PARAMAS = "?populate=*&pagination[pageSize]=10";
 
 export async function getMembers() {
   try {
@@ -73,7 +78,6 @@ export async function getServices() {
     }
 
     const data = await response.json();
-    //console.log(data); // You can remove this in production
 
     return data;
   } catch (error) {
@@ -99,7 +103,6 @@ export async function getReferences() {
     }
 
     const data = await response.json();
-    //console.log(data); // You can remove this in production
 
     return data;
   } catch (error) {
@@ -152,7 +155,7 @@ export async function getArticles() {
     }
 
     const data = await response.json();
-    // console.log("articles data:", data); // Log the received data
+
     return data;
   } catch (error) {
     console.error("Fetch articles error:", error);
@@ -176,7 +179,6 @@ export async function getArticle(id) {
     }
 
     const data = await response.json();
-    // console.log(data); // You can remove this in production
 
     return data;
   } catch (error) {

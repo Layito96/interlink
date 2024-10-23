@@ -1,22 +1,13 @@
 import axios from "axios";
 
+// BASE_URL is the URL of the Strapi API in development
 // const BASE_URL = "http://localhost:1338/api";
+
+// BASE_URL is the URL of the Strapi API in production
 const BASE_URL = "https://cms-interlink.onrender.com/api";
 
+// POPULATE_PARAMAS is a query string that tells Strapi to populate all related data
 const POPULATE_PARAMAS = "?populate=*";
-
-// axios.get('/user?ID=12345')
-//     .then(function (response) {
-//         // handle success
-//         console.log(response);
-//     })
-//     .catch(function (error) {
-//         // handle error
-//         console.log(error);
-//     })
-//     .finally(function () {
-//         // always executed
-//     });
 
 const getMembers = () => axios.get(`${BASE_URL}/members${POPULATE_PARAMAS}`);
 const getServices = () => axios.get(`${BASE_URL}/services${POPULATE_PARAMAS}`);
