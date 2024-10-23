@@ -14,7 +14,7 @@ import {
 import { cn } from "@/app/_lib/utils";
 
 import Image from "next/image";
-import newlogoInterlink from "/public/newlogoInterlink.svg";
+import newlogoInterlink from "/public/4.svg";
 function Navbar() {
   const [openMenu, setOpenMenu] = React.useState(false);
 

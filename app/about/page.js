@@ -346,7 +346,7 @@ export default async function Page() {
                 value={work.attributes.title}
                 className="p-6 data-[state=active]:bg-primary shadow"
               >
-                <div className="flex flex-row justify-between items-center">
+                <div className="flex flex-row justify-between items-center gap-2">
                   <span className="flex justify-center items-center bg-white p-5 text-center rounded shadow align-middle">
                     <i
                       className={`ri-heart-pulse-line text-[2.5rem] text-accent-hover`}
