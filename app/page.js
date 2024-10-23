@@ -19,9 +19,11 @@ export default function Home() {
       <Pricing />
       <Products />
       {/* <Feature /> */}
-      <ArticleCard />
-      <Reference />
       <Values />
+
+      <Reference />
+      <ArticleCard />
+
       <Testimonial />
       <Contact />
       <Maps />
