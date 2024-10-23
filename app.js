@@ -1,11 +1,14 @@
 const { createServer } = require("http");
 const { parse } = require("url");
 const next = require("next");
+const { createProxyMiddleware } = require("http-proxy-middleware");
 
 const dev = process.env.NODE_ENV !== "production";
 const hostname = "localhost";
 const port = 3000;
-// when using middleware `hostname` and `port` must be provided below
+// Strapi is assumed to run on localhost:1337, adjust if necessary
+const strapiPort = 1338;
+
 const app = next({ dev, hostname, port });
 const handle = app.getRequestHandler();
 
@@ -13,11 +16,20 @@ app.prepare().then(() => {
   createServer(async (req, res) => {
     try {
       // Be sure to pass `true` as the second argument to `url.parse`.
-      // This tells it to parse the query portion of the URL.
       const parsedUrl = parse(req.url, true);
-      const { pathname, query } = parsedUrl;
+      const { pathname } = parsedUrl;
 
-      await handle(req, res, parsedUrl);
+      // Exclude /cms from being handled by Next.js
+      if (pathname.startsWith("/cms")) {
+        // Proxy request to Strapi
+        createProxyMiddleware({
+          target: `http://localhost:${strapiPort}`,
+          changeOrigin: true,
+        })(req, res);
+      } else {
+        // For all other requests, handle with Next.js
+        await handle(req, res, parsedUrl);
+      }
     } catch (err) {
       console.error("Error occurred handling", req.url, err);
       res.statusCode = 500;
