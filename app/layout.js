@@ -13,6 +13,7 @@ import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import Navbar from "./_components/Navbar";
 import { Inter } from "next/font/google"; // Example import for custom fonts
+import DebugBanner from "./_components/DebugBanner";
 
 // Example of using a Google Font
 const inter = Inter({ subsets: ["latin"], weight: "400" });
@@ -59,13 +60,27 @@ export default function RootLayout({ children }) {
         />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body className={inter.className}>
+        {/* <div className="w-full h-5 bg-orange-200 flex items-center justify-center z-50 absolute p-2">
+          <h1 className="text-primary">
+            Le site est actuellement en développement.
+          </h1>
+        </div> */}
+
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <DebugBanner />
       </body>
     </html>
   );
