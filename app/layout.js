@@ -16,8 +16,8 @@ import { Inter, Sora } from "next/font/google"; // Example import for custom fon
 import DebugBanner from "./_components/DebugBanner";
 
 // Example of using a Google Font
-const inter = Inter({ subsets: ["latin"], weight: "400" });
-const sora = Sora({ subsets: ["latin"], weight: "400" });
+// const inter = Inter({ subsets: ["latin"], weight: "400" });
+const sora = Sora({ subsets: ["latin"] });
 
 export const metadata = {
   // title: "The Wild Oasis",
@@ -60,12 +60,12 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         /> */}
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="true"
-        />
+        /> */}
         {/* <link
           href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
           rel="stylesheet"

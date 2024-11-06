@@ -15,10 +15,7 @@
 @import "swiper/css/navigation"; /* Optional if you use navigation */
 @import "swiper/css/pagination"; /* Optional if you use pagination */
 
-body {
-  /* font-family: 'Montserrat', sans-serif; */
-  @apply font-sora;
-}
+/*  */
 p {
   @apply text-gray-600;
   @apply font-semibold;
@@ -223,7 +220,7 @@ p {
 
 .text-header-gradient {
   @apply !font-sora bg-primary;
-  
+
   /* background: #3984f4; */
   background: linear-gradient(
     100.4deg,
@@ -234,7 +231,7 @@ p {
   );
   -webkit-background-clip: text;
   background-clip: text;
- 
+
   -webkit-text-fill-color: transparent;
 }
 #hero-area {
@@ -495,8 +492,8 @@ p {
 
 @media screen and (min-width: 700px) {
   .productshero .productherotitle1 h1 {
-      font-size: 48px;
-      line-height: 52.8px;
+    font-size: 48px;
+    line-height: 52.8px;
   }
 }
 .productshero .productherotitle1 h1 {
@@ -504,11 +501,10 @@ p {
   /* font-family: var(--pangea-medium), sans-serif; */
 
   font-weight: 400;
-
 }
 
 @media screen and (max-width: 700px) {
   .pr-wrapper {
-      width: calc(100% - 50px);
+    width: calc(100% - 50px);
   }
 }

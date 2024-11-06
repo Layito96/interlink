@@ -385,13 +385,12 @@ function page() {
               <div className="mt-6 flex items-center space-x-4">
                 {/* Button */}
                 <Link
-                  href="/"
+                  href="/contact"
                   className="inline-block bg-primary text-white px-6 py-2 rounded-md hover:bg-accent-hover transition"
                 >
                   Contactez-nous dès maintenant
                 </Link>
 
-                {/* Icon */}
                 <Link
                   href="#"
                   className="back-to-top w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white text-lg z-20 duration-300 hover:bg-accent-hover transition"
