@@ -109,14 +109,14 @@ function Navbar() {
                 </li>
               </ul>
             </div>
-            <div className="header-btn hidden sm:block sm:absolute sm:right-0 sm:mr-16 lg:static lg:mr-0">
+            {/* <div className="header-btn hidden sm:block sm:absolute sm:right-0 sm:mr-16 lg:static lg:mr-0">
               <Link
                 className="text-primary border border-primary px-10 py-3 rounded-full duration-300 hover:bg-accent-hover hover:text-white"
                 href="#feature"
               >
                 Connexion
               </Link>
-            </div>
+            </div> */}
           </nav>
         </div>
       </div>
