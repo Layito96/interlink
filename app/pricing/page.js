@@ -1,8 +1,8 @@
 import Image from "next/image";
 import logo from "@/public/assets/img/pricing/offre.png";
-import Facilitedacces from "@/public/assets/img/pricing/1-Facilite-dacces.png";
-import Miseajour from "@/public/assets/img/pricing/3-Mise-a-jour.png";
-import Evolutivite from "@/public/assets/img/pricing/2-Evolutivite.png";
+import Facilitedacces from "@/public/assets/img/pricing/1-Facilite-dacces-primary.png";
+import Miseajour from "@/public/assets/img/pricing/3-Mise-a-jour-primary.png";
+import Evolutivite from "@/public/assets/img/pricing/2-Evolutivite-primary.png";
 
 import Personnalisationapprofondie from "@/public/assets/img/pricing/4-Personnalisation-approfondie.png";
 import ContrOLetotal from "@/public/assets/img/pricing/5-ContrOLe-total.png";
@@ -179,7 +179,7 @@ function page() {
                       src={Facilitedacces}
                       alt="Accessibilité et Mobilité"
                       className="object-cover"
-                    //   className="w-64 h-64 mx-auto"
+                      //   className="w-64 h-64 mx-auto"
                     />
                   </div>
                   <div className="mb-3">
@@ -194,7 +194,7 @@ function page() {
                     </p>
                   </div>
                   <a href="#" className="btn">
-                    Get It
+                    Découvrir l&apos;offre
                   </a>
                 </div>
               </div>
@@ -208,7 +208,7 @@ function page() {
                       src={Miseajour}
                       alt="Simplicité Opérationnelle"
                       className="object-cover"
-                    //   className="w-64 h-64 mx-auto"
+                      //   className="w-64 h-64 mx-auto"
                     />
                   </div>
                   <div className="mb-3">
@@ -222,7 +222,7 @@ function page() {
                     </p>
                   </div>
                   <a href="#" className="btn">
-                    Get It
+                    Découvrir l&apos;offre
                   </a>
                 </div>
               </div>
@@ -236,7 +236,7 @@ function page() {
                       src={Evolutivite}
                       alt="Économies de Coûts et Évolutivité"
                       className="object-cover"
-                    //   className="w-64 h-64 mx-auto"
+                      //   className="w-64 h-64 mx-auto"
                     />
                   </div>
                   <div className="mb-3">
@@ -253,7 +253,7 @@ function page() {
                   </div>
 
                   <a href="#" className="btn">
-                    Get It
+                    Découvrir l&apos;offre
                   </a>
                 </div>
               </div>
@@ -263,7 +263,6 @@ function page() {
         </div>
       </section>
       <section className="py-12 bg-gray-50">
-
         <div className="container mx-auto text-center">
           <div className="mb-8">
             {/* Title and Description */}
@@ -272,8 +271,8 @@ function page() {
             </h4>
             <p className="mt-4 text-gray-600 max-w-3xl mx-auto text-center">
               Intégrée directement sur vos serveurs, la solution CentralBill
-              sous le mode d’hébergement On-Premise vous permettra d’assurer
-              un contrôle total sur la passerelle en étant assistés par nos
+              sous le mode d’hébergement On-Premise vous permettra d’assurer un
+              contrôle total sur la passerelle en étant assistés par nos
               experts. Ce mode présente également des bénéfices.
             </p>
           </div>
@@ -289,7 +288,7 @@ function page() {
                       src={Personnalisationapprofondie}
                       alt="Personnalisation approfondie"
                       className="object-cover"
-                    //   className="w-64 h-64 mx-auto"
+                      //   className="w-64 h-64 mx-auto"
                     />
                   </div>
                   <div className="mb-3">
@@ -319,7 +318,7 @@ function page() {
                       src={ContrOLetotal}
                       alt="Contrôle total"
                       className="object-cover"
-                    //   className="w-64 h-64 mx-auto"
+                      //   className="w-64 h-64 mx-auto"
                     />
                   </div>
                   <div className="mb-3">
@@ -346,7 +345,7 @@ function page() {
                       src={Securitedesdonnees}
                       alt="Personnalisation approfondie"
                       className="object-cover"
-                    //   className="w-64 h-64 mx-auto"
+                      //   className="w-64 h-64 mx-auto"
                     />
                   </div>
                   <div className="mb-3">
@@ -375,7 +374,6 @@ function page() {
               <h2 className="text-2xl font-semibold mb-4 sm:text-5xl">
                 Tarification
               </h2>
-
 
               <hr className="my-4 border-t border-gray-300" />
 

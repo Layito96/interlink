@@ -1,6 +1,6 @@
 const DebugBanner = () => {
   return (
-    <div className="fixed bottom-0 left-0 w-full bg-red-500 text-white py-2 px-4 flex items-center justify-between z-50 shadow-lg">
+    <div className="fixed bottom-0 left-0 w-full bg-orange-400 text-white py-2 px-4 flex items-center justify-between z-50 shadow-lg">
       <div className="flex items-center space-x-3">
         {/* Warning Icon */}
         <svg
@@ -17,8 +17,7 @@ const DebugBanner = () => {
             d="M12 8v4m0 4h.01M4.22 4.22a16.07 16.07 0 0115.56 0 16.07 16.07 0 010 15.56 16.07 16.07 0 01-15.56 0 16.07 16.07 0 010-15.56z"
           />
         </svg>
-        <span className="font-semibold">
-          {" "}
+        <span className="font-bold">
           Le site est actuellement en développement.
         </span>
       </div>

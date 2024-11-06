@@ -1,20 +1,11 @@
 import React from "react";
 import { getAbout, getWorks } from "../_lib/data-services";
 import Image from "next/image";
-import About from "../_components/About";
 import viewbg from "@/public/assets/img/viewm.jpg";
-import firebaseLogo from "@/public/assets/img/firebase-logo.png";
 import proj from "@/public/assets/img/proj.jpg";
 import collab from "@/public/assets/img/collab.jpg";
 import team from "@/public/assets/img/team.jpg";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/app/_components/ui/card";
+import { Card, CardContent } from "@/app/_components/ui/card";
 import {
   Tabs,
   TabsContent,

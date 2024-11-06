@@ -8,7 +8,6 @@ import Securitedesdonnees from "@/public/assets/img/pricing/6-Securite-des-donne
 
 function Pricing() {
   return (
-   
     <section id="pricing" className="py-12 bg-accent">
       <div className="container mx-auto text-center">
         <div className="text-center">
@@ -28,9 +27,10 @@ function Pricing() {
             Notre <strong>mode d&quot;hébergement SaaS</strong> propose un accès{" "}
             <strong>immédiat</strong> et <strong>sécurisé</strong> à{" "}
             <strong>CentralBill</strong> directement en ligne, éliminant ainsi
-            la nécessité d&quot;installations locales complexes. Cette approche offre
-            une multitude d&quot;avantages significatifs pour optimiser votre
-            expérience utilisateur et renforcer l&quot;efficacité de vos opérations.
+            la nécessité d&quot;installations locales complexes. Cette approche
+            offre une multitude d&quot;avantages significatifs pour optimiser
+            votre expérience utilisateur et renforcer l&quot;efficacité de vos
+            opérations.
           </p>
         </div>
         {/* SaaS Features in Grid Layout */}
@@ -60,7 +60,7 @@ function Pricing() {
                   </p>
                 </div>
                 <a href="#" className="btn">
-                  Get It
+                  Découvrir l&apos;offre
                 </a>
               </div>
             </div>
@@ -88,7 +88,7 @@ function Pricing() {
                   </p>
                 </div>
                 <a href="#" className="btn">
-                  Get It
+                  Découvrir l&apos;offre
                 </a>
               </div>
             </div>
@@ -119,7 +119,7 @@ function Pricing() {
                 </div>
 
                 <a href="#" className="btn">
-                  Get It
+                  Découvrir l&apos;offre
                 </a>
               </div>
             </div>
