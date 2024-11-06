@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // next.config.js
+  // optimizeCss: false,
+  // enableBabelRuntime: true,
   images: {
     remotePatterns: [
       {
