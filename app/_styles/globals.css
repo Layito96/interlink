@@ -1,6 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210, 50%, 98%; /* Example light background */
+    --foreground: 210, 15%, 20%; /* Example dark text */
+    --card: 210, 50%, 90%; /* Light card background */
+    --card-foreground: 210, 10%, 30%; /* Card text */
+    --primary-foreground: 0, 0%, 100%; /* Light text for primary color */
+    --muted: 210, 10%, 92%; /* Muted background */
+    --muted-foreground: 210, 10%, 40%; /* Muted text */
+    --border: 210, 15%, 90%; /* Light border */
+    --input: 210, 15%, 85%; /* Light input */
+    --ring: 210, 90%, 40%; /* Ring color */
+    --radius: 8px; /* Default radius */
+    --chart-1: 210, 85%, 60%; /* Example chart colors */
+    --chart-2: 210, 75%, 50%;
+    --chart-3: 210, 65%, 40%;
+    --chart-4: 210, 55%, 30%;
+    --chart-5: 210, 45%, 20%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
 /* globals.css */
 /* @import "swiper/swiper-bundle.css"; */
 /* Import this in your globals.css or a component file */

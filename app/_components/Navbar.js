@@ -26,17 +26,36 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    {
+      label: "Accueil",
+      href: "/",
+    },
+    {
+      label: "Services",
+      href: "/services",
+    },
+    {
+      label: "Nos Offres",
+      href: "/pricing",
+    },
+    {
+      label: "Produits",
+      href: "/products",
+    },
+    {
+      label: "A propos",
+      href: "/about",
+    },
+    {
+      label: "Articles",
+      href: "/article",
+    },
+    {
+      label: "Contact",
+      href: "/contact",
+    },
   ];
+
   return (
     <header id="header-wrap" className="relative bg-accent">
       {/* <!-- Navbar Start --> */}

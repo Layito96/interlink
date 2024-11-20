@@ -14,6 +14,7 @@ import Footer from "./_components/Footer";
 import Navbar from "./_components/Navbar";
 import { Inter, Sora } from "next/font/google"; // Example import for custom fonts
 import DebugBanner from "./_components/DebugBanner";
+import { SiteHeader } from "./_components/site-header";
 
 // Example of using a Google Font
 // const inter = Inter({ subsets: ["latin"], weight: "400" });
@@ -78,7 +79,8 @@ export default function RootLayout({ children }) {
           </h1>
         </div> */}
 
-        <Navbar />
+        {/* <Navbar /> */}
+        <SiteHeader />
         <main>{children}</main>
         <Footer />
         <DebugBanner />
