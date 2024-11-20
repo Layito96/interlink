@@ -6,8 +6,8 @@ export function cn(...inputs) {
 }
 
 // STRAPI URL
-// export const STRAPI_URL = "https://cms-interlink.onrender.com";
-export const STRAPI_URL = "http://localhost:1338";
+export const STRAPI_URL = "https://cms-interlink.onrender.com";
+// export const STRAPI_URL = "http://localhost:1338";
 
 // Google Map URL
 export const mapURL =
