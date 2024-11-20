@@ -1,19 +1,14 @@
 import "@/app/_styles/globals.css";
 import "@/public/assets/css/animate.css";
 import "@/public/assets/css/tailwind.css";
-import Head from "next/head";
-import Link from "next/link";
 import "lineicons/web-font/lineicons.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "aos/dist/aos.css";
-import Header from "./_components/Header";
 import Footer from "./_components/Footer";
-import Navbar from "./_components/Navbar";
-import { Inter, Sora } from "next/font/google"; // Example import for custom fonts
-import DebugBanner from "./_components/DebugBanner";
+import { Inter, Sora } from "next/font/google";
 import { SiteHeader } from "./_components/site-header";
 
 // Example of using a Google Font
@@ -83,7 +78,6 @@ export default function RootLayout({ children }) {
         <SiteHeader />
         <main>{children}</main>
         <Footer />
-        <DebugBanner />
       </body>
     </html>
   );

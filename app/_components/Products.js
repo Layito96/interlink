@@ -38,13 +38,13 @@ function Products() {
     fetchMembers();
   }, []);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+  // if (loading) {
+  //   return <p>Loading...</p>;
+  // }
 
-  if (error) {
-    return <p>{error}</p>;
-  }
+  // if (error) {
+  //   return <p>{error}</p>;
+  // }
 
   const productData = Array.isArray(members.data) ? members.data : [];
   return (
@@ -101,48 +101,50 @@ function Products() {
               }}
             >
               <div className="portfolio-carousel w-full justify-center gap-[2.5rem]">
-                {productData.length > 0 ? (
-                  productData.map((product) => {
-                    const attributes = product.attributes || {};
-                    const logoUrl =
-                      attributes.logo?.data?.attributes?.url || "";
+                {
+                  productData.length > 0 &&
+                    productData.map((product) => {
+                      const attributes = product.attributes || {};
+                      const logoUrl =
+                        attributes.logo?.data?.attributes?.url || "";
 
-                    return (
-                      <SwiperSlide key={product.id}>
-                        <div
-                          className="group project__container  mx-auto"
-                          key={product.id}
-                        >
-                          <div className="project__item">
-                            <Image
-                              alt={attributes.title || "Product Image"}
-                              loading="lazy"
-                              // fill
-                              width="50"
-                              height="45"
-                              decoding="async"
-                              className=" h-[2.5rem] w-auto transition-all duration-[1500ms] group-hover:h-[2.5rem] lg:h-[3.82219rem]"
-                              src={`${STRAPI_URL}${logoUrl}`}
-                              style={{ color: "transparent" }}
-                            />
-                            <p className="font-text text-[1.325rem] font-[500] leading-[2.25rem] md:text-[1.45rem] md:leading-[2.5rem] lg:font-[700] lg:leading-[2.5rem]">
-                              {attributes.title}
+                      return (
+                        <SwiperSlide key={product.id}>
+                          <div
+                            className="group project__container  mx-auto"
+                            key={product.id}
+                          >
+                            <div className="project__item">
+                              <Image
+                                alt={attributes.title || "Product Image"}
+                                loading="lazy"
+                                // fill
+                                width="50"
+                                height="45"
+                                decoding="async"
+                                className=" h-[2.5rem] w-auto transition-all duration-[1500ms] group-hover:h-[2.5rem] lg:h-[3.82219rem]"
+                                src={`${STRAPI_URL}${logoUrl}`}
+                                style={{ color: "transparent" }}
+                              />
+                              <p className="font-text text-[1.325rem] font-[500] leading-[2.25rem] md:text-[1.45rem] md:leading-[2.5rem] lg:font-[700] lg:leading-[2.5rem]">
+                                {attributes.title}
+                              </p>
+                            </div>
+                            <p className="hidden font-text text-[1rem] font-[500] leading-[1.5rem] transition-all duration-[500] group-hover:visible group-hover:block group-hover:duration-[500] md:mb-[1.38rem] md:text-[1.125rem] md:leading-[1.625rem]">
+                              {attributes.Description &&
+                                attributes.Description.substring(0, 150)}
+                              ...
                             </p>
                           </div>
-                          <p className="hidden font-text text-[1rem] font-[500] leading-[1.5rem] transition-all duration-[500] group-hover:visible group-hover:block group-hover:duration-[500] md:mb-[1.38rem] md:text-[1.125rem] md:leading-[1.625rem]">
-                            {attributes.Description &&
-                              attributes.Description.substring(0, 150)}
-                            ...
-                          </p>
-                        </div>
-                      </SwiperSlide>
-                    );
-                  })
-                ) : (
-                  <p className="text-white text-center">
-                    No products available.
-                  </p>
-                )}
+                        </SwiperSlide>
+                      );
+                    })
+                  // : (
+                  //   <p className="text-white text-center">
+                  //     No products available.
+                  //   </p>
+                  // )
+                }
               </div>
             </Swiper>
           </div>

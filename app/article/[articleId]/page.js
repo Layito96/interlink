@@ -18,7 +18,6 @@ async function page({ params }) {
         <div className="container intro-wrapper">
           <div className="intro-background-wrapper relative">
             <Image
-              // src={banner}
               src={fullImageUrl}
               fill
               className="object-cover"
