@@ -2,17 +2,6 @@
 import React from "react";
 import Link from "next/link";
 
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "./ui/navigation-menu";
-import { cn } from "@/app/_lib/utils";
-
 import Image from "next/image";
 import newlogoInterlink from "/public/4.svg";
 function Navbar() {
@@ -21,7 +10,6 @@ function Navbar() {
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
-  // const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -102,7 +90,7 @@ function Navbar() {
                   <Link className="page-scroll" href="/services">
                     Services
                   </Link>
-                </li>{" "}
+                </li>
                 <li className="nav-item">
                   <Link className="page-scroll" href="/pricing">
                     Nos Offres
@@ -124,21 +112,12 @@ function Navbar() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  {/* <Link className="page-scroll" href="#contact"> */}
                   <Link className="page-scroll" href="/contact">
                     Contact
                   </Link>
                 </li>
               </ul>
             </div>
-            {/* <div className="header-btn hidden sm:block sm:absolute sm:right-0 sm:mr-16 lg:static lg:mr-0">
-              <Link
-                className="text-primary border border-primary px-10 py-3 rounded-full duration-300 hover:bg-accent-hover hover:text-white"
-                href="#feature"
-              >
-                Connexion
-              </Link>
-            </div> */}
           </nav>
         </div>
       </div>

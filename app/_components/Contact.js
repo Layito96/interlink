@@ -90,7 +90,6 @@ function Contact() {
                     <i className="lni lni-map-marker"></i>
                   </div>
                   <p className="pl-3">
-                    {" "}
                     055 Ilot C Zone Château D’Eau Nouakchott – Mauritanie
                   </p>
                 </div>
