@@ -64,10 +64,8 @@ async function Article() {
       </form>
 
       <div className="mx-90 px-90 md:px-8 lg:px-[20rem]">
-        {" "}
         {/* Réduit le padding horizontal */}
         <div className="wrapper mx-auto mt-28 grid gap-3 md:gap-4 p-2 lg:p-4 font-poppins sm:grid-cols-2 lg:grid-cols-2">
-          {/* <div className="wrapper mx-auto mt-28 grid gap-0.5 md:gap-0.5 p-2 lg:p-4 font-poppins sm:grid-cols-2 lg:grid-cols-2"> */}{" "}
           {/* Réduit le gap et padding */}
           {articles?.data?.length > 0 &&
             articles.data.map((data) => {

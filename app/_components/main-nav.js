@@ -3,8 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-
-import { AppleIcon } from "lucide-react";
 import { cn } from "../_lib/utils";
 import Image from "next/image";
 import newlogoInterlink from "/public/4.svg";
@@ -80,7 +78,6 @@ export function MainNav() {
   return (
     <div className="mr-4 hidden md:flex">
       <Link href="/" className="mr-4 flex items-center gap-2 lg:mr-6">
-        {/* <AppleIcon className="w-6 h-6 text-primary" /> */}
         <Image
           src={newlogoInterlink}
           alt="Logo Interlink"
@@ -88,7 +85,6 @@ export function MainNav() {
           // placeholder="blur"
           style={{ height: "100%" }}
         />
-        {/* <span className="hidden font-bold lg:inline-block">Interlink</span> */}
       </Link>
       <nav className="flex items-center gap-4 text-sm xl:gap-6">
         <NavigationMenu>
@@ -105,23 +101,6 @@ export function MainNav() {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                      {/* <li className="row-span-3">
-                      <NavigationMenuLink asChild>
-                        <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                          href="/"
-                        >
-                          
-                          <div className="mb-2 mt-4 text-lg font-medium">
-                            shadcn/ui
-                          </div>
-                          <p className="text-sm leading-tight text-muted-foreground">
-                            Beautifully designed components built with Radix UI
-                            and Tailwind CSS.
-                          </p>
-                        </a>
-                      </NavigationMenuLink>
-                    </li> */}
                       {item.items.map((subItem, index) => (
                         <ListItem
                           href={subItem.href}

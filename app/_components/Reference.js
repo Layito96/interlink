@@ -13,9 +13,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
-import Link from "next/link";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
-import { getReferences, getTestimonials } from "../_lib/data-services";
+import { getReferences } from "../_lib/data-services";
 import { STRAPI_URL } from "../_lib/utils";
 
 function Reference() {
@@ -67,40 +66,41 @@ function Reference() {
           className="h-fit"
         >
           <div className="flex flex-wrap justify-center items-center">
-            {referencesData.length > 0 ? (
-              referencesData.map((reference) => {
-                const attributes = reference.attributes || {};
-                const logoUrl = attributes.logo?.data?.attributes?.url || "";
+            {
+              referencesData.length > 0 &&
+                referencesData.map((reference) => {
+                  const attributes = reference.attributes || {};
+                  const logoUrl = attributes.logo?.data?.attributes?.url || "";
 
-                return (
-                  <SwiperSlide key={reference.id} className="mt-4 mb-20 ">
-                    <div
-                      key={reference.id}
-                      className="m-3 h-fit flex flex-col items-center"
-                    >
-                      <HoverCard>
-                        <HoverCardTrigger>
-                          <Image
-                            width={300} // Specify the width of the image (used as a ratio)
-                            height={200}
-                            className="client-logo w-full h-auto"
-                            src={`${STRAPI_URL}${logoUrl}`}
-                            alt={attributes.Name || "Client logo"}
-                          />
-                        </HoverCardTrigger>
-                        <HoverCardContent className="m-3 w-fit border-transparent rounded bg-transparent text-center mt-2">
-                          {" "}
-                          {/* Adjust mt-2 to control spacing */}
-                          {attributes.Name || "Client logo"}
-                        </HoverCardContent>
-                      </HoverCard>
-                    </div>
-                  </SwiperSlide>
-                );
-              })
-            ) : (
-              <p className="text-white text-center">No references available.</p>
-            )}
+                  return (
+                    <SwiperSlide key={reference.id} className="mt-4 mb-20 ">
+                      <div
+                        key={reference.id}
+                        className="m-3 h-fit flex flex-col items-center"
+                      >
+                        <HoverCard>
+                          <HoverCardTrigger>
+                            <Image
+                              width={300} // Specify the width of the image (used as a ratio)
+                              height={200}
+                              className="client-logo w-full h-auto"
+                              src={`${STRAPI_URL}${logoUrl}`}
+                              alt={attributes.Name || "Client logo"}
+                            />
+                          </HoverCardTrigger>
+                          <HoverCardContent className="m-3 w-fit border-transparent rounded bg-transparent text-center mt-2">
+                            {/* Adjust mt-2 to control spacing */}
+                            {attributes.Name || "Client logo"}
+                          </HoverCardContent>
+                        </HoverCard>
+                      </div>
+                    </SwiperSlide>
+                  );
+                })
+              // : (
+              //   <p className="text-white text-center">No references available.</p>
+              // )
+            }
           </div>
         </Swiper>
       </div>

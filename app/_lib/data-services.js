@@ -263,3 +263,182 @@ export async function getProducts() {
     return { data: [] }; // Ensure the return type matches the expected structure
   }
 }
+
+// export async function getProductsByID
+export async function getProductsByID(id) {
+  try {
+    const url = `${BASE_URL}/Products/${id}${POPULATE_PARAMAS}`;
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      console.error("Error fetching data:", response.statusText);
+      throw new Error("Error fetching product by ID");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Fetch error:", error);
+    return { data: [] }; // Ensure the return type matches the expected structure
+  }
+}
+
+export async function getHebergementSaasDesciption() {
+  try {
+    const url = `${BASE_URL}/hebergement-saas-desciption${POPULATE_PARAMAS}`;
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      console.error("Error fetching data:", response.statusText);
+      throw new Error("Error fetching hebergement saas desciption");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Fetch hebergement-saas-desciption error:", error);
+    return { data: [] }; // Ensure the return type matches the expected structure
+  }
+}
+
+export async function getHebergementsSaas() {
+  try {
+    const response = await fetch(
+      `${BASE_URL}/hebergements-saas${POPULATE_PARAMAS}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (!response.ok) {
+      // Handle the error if the response is not OK
+      console.error("Error fetching hebergement-saas:", response.statusText);
+      throw new Error("Error fetching hebergement-saas");
+    }
+
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    // Handle any errors that occurred during the fetch
+    console.error("Fetch error:", error);
+    return []; // Return an empty array or handle the error as needed
+  }
+}
+
+export async function getHebergementLocaleDesciption() {
+  try {
+    const url = `${BASE_URL}/hebergement-local-desciption${POPULATE_PARAMAS}`;
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      console.error("Error fetching data:", response.statusText);
+      throw new Error(
+        "Error fetching hebergement-local-desciption saas desciption"
+      );
+    }
+
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error("Fetch hebergement-locale-desciption error:", error);
+    return { data: [] }; // Ensure the return type matches the expected structure
+  }
+}
+
+export async function getHebergementsLocale() {
+  try {
+    const response = await fetch(
+      `${BASE_URL}/hebergements-locals${POPULATE_PARAMAS}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (!response.ok) {
+      // Handle the error if the response is not OK
+      console.error("Error fetching hebergements-local:", response.statusText);
+      throw new Error("Error fetching hebergement-local");
+    }
+
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    // Handle any errors that occurred during the fetch
+    console.error("Fetch error:", error);
+    return []; // Return an empty array or handle the error as needed
+  }
+}
+export async function getTarification() {
+  try {
+    const url = `${BASE_URL}/tarification${POPULATE_PARAMAS}`;
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      console.error("Error fetching data:", response.statusText);
+      throw new Error("Error fetching tarification saas desciption");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Fetch tarification error:", error);
+    return { data: [] }; // Ensure the return type matches the expected structure
+  }
+}
+
+export async function getHebergement() {
+  try {
+    const url = `${BASE_URL}/hebergement${POPULATE_PARAMAS}`;
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      console.error("Error fetching data:", response.statusText);
+      throw new Error("Error fetching hebergement");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Fetch hebergement error:", error);
+    return { data: [] }; // Ensure the return type matches the expected structure
+  }
+}

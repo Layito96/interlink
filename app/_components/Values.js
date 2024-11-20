@@ -27,9 +27,6 @@ async function Values() {
               values.data.length > 0 &&
               values.data.map((value) => {
                 const attributes = value.attributes || {};
-                //  console.log("Values attributes", attributes);
-                // const iconData = attributes.icon?.data || {};
-                // const iconAttributes = iconData.attributes || {};
                 if (attributes.title !== "Slogan") {
                   return (
                     <div

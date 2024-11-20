@@ -22,6 +22,7 @@ export default async function Page() {
   const images = about?.attributes?.image?.data?.attributes;
   const imageUrl = about?.attributes?.image?.data?.attributes?.url || "";
   const fullImageUrl = `${STRAPI_URL}${imageUrl}`;
+  console.log("fullImageUrl", fullImageUrl);
 
   return (
     <>
@@ -42,7 +43,7 @@ export default async function Page() {
             <h1 className="title-font text-white mb-4 text-xl font-bold leading-10 tracking-tight sm:text-5xl">
               Interlink
             </h1>
-            <p className="text-white">{about.attributes.slogan}</p>
+            <p className="text-white">{about?.attributes.slogan}</p>
           </div>
         </div>
       </section>
