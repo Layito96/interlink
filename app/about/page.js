@@ -49,7 +49,7 @@ export default async function Page() {
       {/* <About Works={works} /> */}
 
       <section className="my-32 container mx-auto">
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col lg:!flex-row">
           {/* Left column with text */}
           <div className="lg:w-1/2">
             <h2 className="title-font text-primary mb-4 text-xl font-bold leading-10 tracking-tight sm:text-5xl">
@@ -225,7 +225,7 @@ export default async function Page() {
               <div
                 key={index}
                 className={`flex flex-col ${
-                  index % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row"
+                  index % 2 === 0 ? "lg:!flex-row-reverse" : "lg:!flex-row"
                 } items-center lg:justify-between`}
               >
                 <div className="mb-5 lg:mb-0 flex justify-center lg:w-1/2">
