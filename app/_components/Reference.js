@@ -88,7 +88,7 @@ function Reference() {
                               alt={attributes.Name || "Client logo"}
                             />
                           </HoverCardTrigger>
-                          <HoverCardContent className="m-3 w-fit border-transparent rounded bg-transparent text-center mt-2">
+                          <HoverCardContent className="m-3 w-fit border-transparent rounded bg-white text-center mt-2">
                             {/* Adjust mt-2 to control spacing */}
                             {attributes.Name || "Client logo"}
                           </HoverCardContent>

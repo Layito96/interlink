@@ -10,7 +10,7 @@ async function Article() {
   return (
     <div>
       {/* title, author, imageSource ,content  */}
-      <div className="mt-20 bg-accent  mx-auto py-20 relative">
+      <div className=" bg-accent  mx-auto py-40 relative">
         <div className="flex pt-10 justify-center items-center font-poppins py-10 lg:py-0 px-10">
           <div className="space-y-5 text-center w-full flex justify-center ">
             <h1 className="title-font text-primary mb-4 text-xl font-bold leading-10 tracking-tight sm:text-5xl ">

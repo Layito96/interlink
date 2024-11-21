@@ -57,7 +57,7 @@ async function ArticleCard() {
         <p className="text-center">
           <Link
             href="/article"
-            className="inline-flex items-center text-primary border-4 border-primary px-10 py-3 rounded-full duration-300 hover:bg-primary hover:text-white"
+            className="inline-flex items-center text-primary border border-primary px-10 py-3 rounded-md duration-300 hover:bg-primary hover:text-white"
           >
             <span className="mr-2">Nos articles</span>
             <i className="lni lni-arrow-right"></i>

@@ -20,7 +20,7 @@ function Contact() {
                     <div className="mx-3">
                       <input
                         type="text"
-                        className="form-input rounded-full"
+                        className="form-input rounded-md"
                         id="name"
                         name="name"
                         placeholder="Votre nom"
@@ -35,7 +35,7 @@ function Contact() {
                         type="text"
                         placeholder="Email"
                         id="email"
-                        className="form-input rounded-full"
+                        className="form-input rounded-md"
                         name="email"
                         required
                         data-error="Vailler saisir votre email"
@@ -49,7 +49,7 @@ function Contact() {
                         placeholder="Sujet"
                         id="subject"
                         name="subject"
-                        className="form-input rounded-full"
+                        className="form-input rounded-md"
                         required
                         data-error="Veiller saisir le sujet de votre message"
                       />
@@ -58,7 +58,7 @@ function Contact() {
                   <div className="w-full">
                     <div className="mx-3">
                       <textarea
-                        className="form-input rounded-lg"
+                        className="form-input rounded-md"
                         id="message"
                         name="message"
                         placeholder="Message"
