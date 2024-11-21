@@ -21,7 +21,7 @@ export function MobileNav() {
       <DrawerTrigger asChild>
         <Button
           variant="ghost"
-          className="-ml-2 mr-2 h-8 w-8 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+          className="-ml-2 mr-2 h-8 w-8 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:!hidden"
         >
           <Menu className="w-6 h-6 text-primary font-semibold" />
         </Button>

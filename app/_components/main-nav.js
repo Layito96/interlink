@@ -100,7 +100,7 @@ export function MainNav() {
   const pathname = usePathname();
 
   return (
-    <div className="mr-4 hidden md:flex">
+    <div className="mr-4 hidden md:!flex">
       <Link href="/" className="mr-4 flex items-center gap-2 lg:mr-6">
         <Image
           src={newlogoInterlink}
