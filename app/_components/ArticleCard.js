@@ -20,7 +20,6 @@ async function ArticleCard() {
 
         <div className="-mx-4 flex flex-wrap">
           {articles.map((article) => {
-            console.log("article", article);
             const image = article.attributes.image;
             const imageUrl = image?.data?.attributes?.url || "";
             return (
@@ -44,7 +43,7 @@ async function ArticleCard() {
                     {article.attributes.description}
                   </p>
                   <Link
-                    href={`/article/${article.attributes.id}`}
+                    href={`/article/${article.id}`}
                     className="text-blue-600 hover:underline"
                   >
                     Lire la suite
