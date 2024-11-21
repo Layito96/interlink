@@ -1,10 +1,7 @@
 import React from "react";
-import { getAbout, getWorks } from "../_lib/data-services";
+import { getAbout, getHistoriques, getWorks } from "../_lib/data-services";
 import Image from "next/image";
 import viewbg from "@/public/assets/img/viewm.jpg";
-import proj from "@/public/assets/img/proj.jpg";
-import collab from "@/public/assets/img/collab.jpg";
-import team from "@/public/assets/img/team.jpg";
 import { Card, CardContent } from "@/app/_components/ui/card";
 import {
   Tabs,
@@ -22,7 +19,8 @@ export default async function Page() {
   const images = about?.attributes?.image?.data?.attributes;
   const imageUrl = about?.attributes?.image?.data?.attributes?.url || "";
   const fullImageUrl = `${STRAPI_URL}${imageUrl}`;
-  console.log("fullImageUrl", fullImageUrl);
+  const historiquesData = await getHistoriques();
+  const historiques = historiquesData?.data;
 
   return (
     <>
@@ -51,7 +49,7 @@ export default async function Page() {
       {/* <About Works={works} /> */}
 
       <section className="my-32 container mx-auto">
-        <div className="flex flex-col lg:!flex-row">
+        <div className="flex flex-col lg:flex-row">
           {/* Left column with text */}
           <div className="lg:w-1/2">
             <h2 className="title-font text-primary mb-4 text-xl font-bold leading-10 tracking-tight sm:text-5xl">
@@ -194,7 +192,7 @@ export default async function Page() {
             {/* fin */}
           </div>
           {/* Right column with image */}
-          <div className="hidden lg:!flex lg:w-1/2 justify-center ">
+          <div className="hidden lg:flex lg:w-1/2 justify-center ">
             <div className="inline-block">
               <Image
                 src={fullImageUrl}
@@ -213,111 +211,44 @@ export default async function Page() {
           Nos chiffres clés
         </h2>
         <div className="space-y-12">
-          {/* First KPI */}
-          <div className="flex flex-col lg:!flex-row-reverse items-center lg:!justify-between">
-            <div className="mb-5 lg:!mb-0 flex justify-center lg:!w-1/2">
-              <div className="flex items-center space-x-4 hover:scale-105 transition-transform">
-                <Image
-                  src={proj}
-                  alt=""
-                  width={280}
-                  height={180}
-                  // className="w-16 h-16"
-                />
-                <div>
-                  <p className="text-5xl font-bold">20</p>
-                  <p className="text-xl">experts</p>
-                </div>
-              </div>
-            </div>
-            <div className="lg:!w-1/2">
-              <p className="text-lg">
-                INTERLINK s&apos;appuie sur des équipes locales hautement
-                qualifiées qui conçoivent, développent et déploient des
-                solutions personnalisées.
-              </p>
-            </div>
-          </div>
+          {historiques.map((historique, index) => {
+            const image = historique.attributes.image;
+            const imageUrl = image?.data?.attributes?.url || "";
+            const chiffre = historique.attributes.chiffre || "N/A";
+            const valeur =
+              historique.attributes.valeur || "Information manquante";
+            const description =
+              historique.attributes.description ||
+              "Pas de description disponible";
 
-          {/* Second KPI */}
-          <div className="flex flex-col lg:!flex-row items-center lg:justify-between">
-            <div className="mb-5 lg:mb-0 flex justify-center lg:w-1/2">
-              <div className="flex items-center space-x-4 hover:scale-105 transition-transform">
-                <Image
-                  src={proj}
-                  alt=""
-                  width={280}
-                  height={180}
-                  // className="w-16 h-16"
-                />
-                <div>
-                  <div className="flex items-end space-x-1">
-                    <p className="text-5xl font-bold">14</p>
-                    <p className="text-xl">ans</p>
+            return (
+              <div
+                key={index}
+                className={`flex flex-col ${
+                  index % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row"
+                } items-center lg:justify-between`}
+              >
+                <div className="mb-5 lg:mb-0 flex justify-center lg:w-1/2">
+                  <div className="flex items-center space-x-4 hover:scale-105 transition-transform">
+                    <Image
+                      src={STRAPI_URL + imageUrl}
+                      alt={valeur}
+                      width={280}
+                      height={180}
+                      // className="w-16 h-16"
+                    />
+                    <div>
+                      <p className="text-5xl font-bold">{chiffre}</p>
+                      <p className="text-xl">{valeur}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="lg:w-1/2">
-              <p className="text-lg">
-                Depuis sa création, INTERLINK s&apos;est imposée comme un leader
-                dans les solutions numériques, offrant des services en
-                e-gouvernance, e-santé, et plus.
-              </p>
-            </div>
-          </div>
-
-          {/* Third KPI */}
-          <div className="flex flex-col lg:flex-row-reverse items-center lg:justify-between">
-            <div className="mb-5 lg:mb-0 flex justify-center lg:w-1/2">
-              <div className="flex items-center space-x-4 hover:scale-105 transition-transform">
-                <Image
-                  src={collab}
-                  alt=""
-                  width={280}
-                  height={180}
-                  // className="w-16 h-16"
-                />
-                <div>
-                  <p className="text-5xl font-bold">6</p>
-                  <p className="text-xl">domaines d&apos;expertise</p>
+                <div className="lg:w-1/2">
+                  <p className="text-lg">{description}</p>
                 </div>
               </div>
-            </div>
-            <div className="lg:w-1/2">
-              <p className="text-lg">
-                E-Gouvernance, E-Santé, Développement, Messagerie, Géoservices
-                et Cybersécurité, avec des solutions innovantes pour les
-                entreprises et les institutions.
-              </p>
-            </div>
-          </div>
-
-          {/* Fourth KPI */}
-          <div className="flex flex-col lg:flex-row items-center lg:justify-between">
-            <div className="mb-5 lg:mb-0 flex justify-center lg:w-1/2">
-              <div className="flex items-center space-x-4 hover:scale-105 transition-transform">
-                <Image
-                  src={team}
-                  alt=""
-                  width={280}
-                  height={180}
-                  // className="w-16 h-16"
-                />
-                <div>
-                  <p className="text-5xl font-bold">Partenariats avec</p>
-                  <p className="text-xl">des leaders mondiaux</p>
-                </div>
-              </div>
-            </div>
-            <div className="lg:w-1/2">
-              <p className="text-lg">
-                Grâce à des partenariats solides, INTERLINK est à la pointe des
-                innovations, garantissant des solutions évolutives et adaptées à
-                chaque client.
-              </p>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </section>
       <Card className="p-10 mb-3 relative border-zinc-200 !bg-transparent text-zinc-950 shadow dark:border-accent dark:bg-accent dark:text-zinc-50">

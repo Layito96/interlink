@@ -163,6 +163,44 @@ export async function getArticles() {
   }
 }
 
+export async function getLastArticles() {
+  try {
+    const url = `${BASE_URL}/Blogs${POPULATE_PARAMAS}`;
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      console.error("Error fetching data:", response.statusText);
+      throw new Error("Error fetching articles");
+    }
+
+    const data = await response.json();
+
+    // Assurez-vous que `data` contient un tableau dans `data.data`
+    const articles = data?.data || [];
+
+    // Trier les articles par date de création (ou un autre champ pertinent)
+    const sortedArticles = articles.sort((a, b) => {
+      const dateA = new Date(a.attributes.createdAt);
+      const dateB = new Date(b.attributes.createdAt);
+      return dateB - dateA; // Trier par ordre décroissant (plus récent d'abord)
+    });
+
+    // Récupérer les trois derniers
+    const latestArticles = sortedArticles.slice(0, 3);
+
+    return latestArticles;
+  } catch (error) {
+    console.error("Fetch articles error:", error);
+    return { data: [] }; // Garantir la compatibilité avec le reste de l'application
+  }
+}
+
 export async function getArticle(id) {
   try {
     const response = await fetch(`${BASE_URL}/blogs/${id}${POPULATE_PARAMAS}`, {
@@ -439,6 +477,31 @@ export async function getHebergement() {
     return data;
   } catch (error) {
     console.error("Fetch hebergement error:", error);
+    return { data: [] }; // Ensure the return type matches the expected structure
+  }
+}
+
+export async function getHistoriques() {
+  try {
+    const url = `${BASE_URL}/histoires${POPULATE_PARAMAS}`;
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      console.error("Error fetching data:", response.statusText);
+      throw new Error("Error fetching histoires");
+    }
+
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error("Fetch histoires error:", error);
     return { data: [] }; // Ensure the return type matches the expected structure
   }
 }

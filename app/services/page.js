@@ -13,6 +13,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/app/_components/ui/tabs";
+import { STRAPI_URL } from "../_lib/utils";
 
 export default function Page() {
   return (
@@ -107,11 +108,7 @@ export default function Page() {
                     <li>Iconographie</li>
                     <li>Colors</li>
                   </ul>
-                  <p>
-                    lorem Ipsum is simply dummy text, dolor non emet, sed diam
-                    non pro posuere cubilia Curie et euismod tempor inc tempor
-                    ullamcorper null
-                  </p>
+                  <p></p>
                 </div>
               </CardContent>
             </Card>
@@ -133,11 +130,7 @@ export default function Page() {
                     <li>Iconographie</li>
                     <li>Colors</li>
                   </ul>
-                  <p>
-                    lorem Ipsum is simply dummy text, dolor non emet, sed diam
-                    non pro posuere cubilia Curie et euismod tempor inc tempor
-                    ullamcorper null
-                  </p>
+                  <p></p>
                 </div>
               </CardContent>
             </Card>
@@ -231,13 +224,13 @@ export default function Page() {
         </div>
         <div className="flex flex-col">
           <div className="flex items-center justify-between mb-4">
-            <CardTitle className="text-black">Backend</CardTitle>
+            {/* <CardTitle className="text-black">Backend</CardTitle> */}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-[16px]">
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
                 <img
-                  src="https://www.nomeo.fr/images/technologies/figma.png"
+                  src={`${STRAPI_URL}/uploads/react_native_e6b047e683.png`}
                   alt=""
                 ></img>
               </picture>
@@ -245,7 +238,7 @@ export default function Page() {
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
                 <img
-                  src="https://www.nomeo.fr/images/technologies/figma.png"
+                  src={`${STRAPI_URL}/uploads/symfony_f79c2ffa2c.png`}
                   alt=""
                 ></img>
               </picture>
@@ -253,7 +246,7 @@ export default function Page() {
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
                 <img
-                  src="https://www.nomeo.fr/images/technologies/figma.png"
+                  src={`${STRAPI_URL}/uploads/flutter_a8b74f56bb.png`}
                   alt=""
                 ></img>
               </picture>
@@ -261,7 +254,7 @@ export default function Page() {
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
                 <img
-                  src="https://www.nomeo.fr/images/technologies/figma.png"
+                  src={`${STRAPI_URL}/uploads/docker_5d1df56bed.png`}
                   alt=""
                 ></img>
               </picture>
@@ -269,7 +262,7 @@ export default function Page() {
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
                 <img
-                  src="https://www.nomeo.fr/images/technologies/figma.png"
+                  src={`${STRAPI_URL}/uploads/nodejs_2571d885bd.png`}
                   alt=""
                 ></img>
               </picture>
@@ -277,7 +270,7 @@ export default function Page() {
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
                 <img
-                  src="https://www.nomeo.fr/images/technologies/figma.png"
+                  src={`${STRAPI_URL}/uploads/php_68c9307bce.png`}
                   alt=""
                 ></img>
               </picture>
@@ -285,8 +278,28 @@ export default function Page() {
             <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
               <picture>
                 <img
-                  src="https://www.nomeo.fr/images/technologies/figma.png"
+                  src={`${STRAPI_URL}/uploads/typescript_a0d749f316.png`}
                   alt=""
+                ></img>
+              </picture>
+            </a>
+            <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
+              <picture>
+                <img
+                  src={`${STRAPI_URL}/uploads/firebase_logo_bd988f4a66.png`}
+                  alt=""
+                  width={121}
+                  height={31}
+                ></img>
+              </picture>
+            </a>
+            <a className="flex rounded-[16px] border-primary border h-[97px]  justify-center items-center relative">
+              <picture>
+                <img
+                  src={`${STRAPI_URL}/uploads/next_js_logo_d378cb46ad.png`}
+                  alt=""
+                  width={121}
+                  height={31}
                 ></img>
               </picture>
             </a>
