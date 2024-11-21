@@ -152,9 +152,9 @@ function Footer() {
           <div className="flex flex-wrap">
             <div className="w-full text-center">
               <p className="text-primary">
-                &copy; Tous droit réservés par
+                &copy; Tous droit réservés par &nbsp;
                 <Link
-                  className="text-primary duration-300 hover:text-accent-hover"
+                  className="text-primary transition-all duration-300 hover:text-accent-hover"
                   href=""
                   rel="nofollow"
                 >

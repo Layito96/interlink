@@ -51,7 +51,7 @@ export default async function Page() {
       {/* <About Works={works} /> */}
 
       <section className="my-32 container mx-auto">
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col lg:!flex-row">
           {/* Left column with text */}
           <div className="lg:w-1/2">
             <h2 className="title-font text-primary mb-4 text-xl font-bold leading-10 tracking-tight sm:text-5xl">
@@ -194,7 +194,7 @@ export default async function Page() {
             {/* fin */}
           </div>
           {/* Right column with image */}
-          <div className="hidden lg:flex lg:w-1/2 justify-center ">
+          <div className="hidden lg:!flex lg:w-1/2 justify-center ">
             <div className="inline-block">
               <Image
                 src={fullImageUrl}
@@ -214,8 +214,8 @@ export default async function Page() {
         </h2>
         <div className="space-y-12">
           {/* First KPI */}
-          <div className="flex flex-col lg:flex-row-reverse items-center lg:justify-between">
-            <div className="mb-5 lg:mb-0 flex justify-center lg:w-1/2">
+          <div className="flex flex-col lg:!flex-row-reverse items-center lg:!justify-between">
+            <div className="mb-5 lg:!mb-0 flex justify-center lg:!w-1/2">
               <div className="flex items-center space-x-4 hover:scale-105 transition-transform">
                 <Image
                   src={proj}
@@ -230,7 +230,7 @@ export default async function Page() {
                 </div>
               </div>
             </div>
-            <div className="lg:w-1/2">
+            <div className="lg:!w-1/2">
               <p className="text-lg">
                 INTERLINK s&apos;appuie sur des équipes locales hautement
                 qualifiées qui conçoivent, développent et déploient des
@@ -240,7 +240,7 @@ export default async function Page() {
           </div>
 
           {/* Second KPI */}
-          <div className="flex flex-col lg:flex-row items-center lg:justify-between">
+          <div className="flex flex-col lg:!flex-row items-center lg:justify-between">
             <div className="mb-5 lg:mb-0 flex justify-center lg:w-1/2">
               <div className="flex items-center space-x-4 hover:scale-105 transition-transform">
                 <Image

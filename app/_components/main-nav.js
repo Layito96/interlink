@@ -70,30 +70,30 @@ export const menuItems = [
     href: "/contact",
     items: [],
   },
-  {
-    label: "Nos Offres",
-    href: "/pricing",
-    items: [
-      {
-        title: "Accessibilité et Mobilité",
-        href: "/pricing",
-        description:
-          "L'offre SaaS permet un accès instantané aux services depuis n'importe quel endroit, favorisant la mobilité des utilisateurs et garantissant une disponibilité universelle.",
-      },
-      {
-        title: "Simplicité Opérationnelle",
-        href: "/pricing",
-        description:
-          "Élimination des complexités liées à l'installation et à la maintenance locales, avec des mises à jour automatiques qui simplifient la gestion quotidienne.",
-      },
-      {
-        title: "Économies de Coûts et Évolutivité ",
-        href: "/pricing",
-        description:
-          " Réduction des coûts d'infrastructure initiaux, avec la capacité d'ajuster les ressources en fonction des besoins pour une solution économique et évolutive.",
-      },
-    ],
-  },
+  // {
+  //   label: "Nos Offres",
+  //   href: "/pricing",
+  //   items: [
+  //     {
+  //       title: "Accessibilité et Mobilité",
+  //       href: "/pricing",
+  //       description:
+  //         "L'offre SaaS permet un accès instantané aux services depuis n'importe quel endroit, favorisant la mobilité des utilisateurs et garantissant une disponibilité universelle.",
+  //     },
+  //     {
+  //       title: "Simplicité Opérationnelle",
+  //       href: "/pricing",
+  //       description:
+  //         "Élimination des complexités liées à l'installation et à la maintenance locales, avec des mises à jour automatiques qui simplifient la gestion quotidienne.",
+  //     },
+  //     {
+  //       title: "Économies de Coûts et Évolutivité ",
+  //       href: "/pricing",
+  //       description:
+  //         " Réduction des coûts d'infrastructure initiaux, avec la capacité d'ajuster les ressources en fonction des besoins pour une solution économique et évolutive.",
+  //     },
+  //   ],
+  // },
 ];
 
 export function MainNav() {
@@ -145,7 +145,8 @@ export function MainNav() {
                     <NavigationMenuLink
                       className={cn(
                         pathname === item.href && "text-accent-hover",
-                        navigationMenuTriggerStyle()
+                        navigationMenuTriggerStyle(),
+                        "hover:scale-110 hover:font-bold transition-all ease-in-out"
                       )}
                       active={pathname === item.href}
                     >
