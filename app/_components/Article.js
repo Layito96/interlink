@@ -10,8 +10,8 @@ async function Article() {
   return (
     <div>
       {/* title, author, imageSource ,content  */}
-      <div className=" bg-accent  mx-auto py-40 relative">
-        <div className="flex pt-10 justify-center items-center font-poppins py-10 lg:py-0 px-10">
+      <div className=" bg-accent  mx-auto py-20 md:!py-40 relative">
+        <div className="flex pt-10 justify-center items-center font-poppins  lg:py-0 px-10">
           <div className="space-y-5 text-center w-full flex justify-center ">
             <h1 className="title-font text-primary mb-4 text-xl font-bold leading-10 tracking-tight sm:text-5xl ">
               Articles
@@ -20,11 +20,11 @@ async function Article() {
         </div>
 
         {/* Floating Input Field */}
-        <div className="mx-auto">
-          <form className="max-w-sm mx-auto">
+        <div className="mx-2 md:mx-5">
+          <form className="max-w-[300px] mx-auto">
             <input
               type="text"
-              className="absolute inset-x-0 form-input bottom-0 translate-y-1/2 !mb-0 mx-auto !w-1/2  border border-gray-300 rounded shadow-lg"
+              className="absolute inset-x-0 form-input bottom-0 translate-y-1/2 mr:5 ml:5 !mb-0 md:!mx-auto md:!w-1/2 border border-gray-300 rounded shadow-lg"
               placeholder="rechercher ici"
             />
           </form>

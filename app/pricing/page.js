@@ -83,7 +83,7 @@ export default async function page() {
           </div>
 
           {/* SaaS Features in Grid Layout */}
-          <div className="container">
+          <div className="md:container">
             <div className="flex flex-wrap justify-center md:justify-start">
               {/* <!-- single pricing table starts --> */}
               {hebergementSaas.map((hebergement) => {
@@ -92,7 +92,7 @@ export default async function page() {
                 return (
                   <div
                     key={hebergement.id}
-                    className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3"
+                    className="w-full sm:w-2/3 md:!w-1/2 lg:!w-1/3"
                   >
                     <div className="pricing-box">
                       <div className="w-2/5 mx-auto text-center relative">
@@ -128,7 +128,7 @@ export default async function page() {
       </section>
       {/* Pricing Section On-Premise */}
       <section className="py-12 bg-gray-50">
-        <div className="container mx-auto text-center">
+        <div className="md:container mx-auto text-center">
           <div className="mb-8">
             {/* Title and Description */}
             <h4 className="text-2xl font-semibold text-gray-800 ">
@@ -148,7 +148,7 @@ export default async function page() {
                 return (
                   <div
                     key={hebergement.id}
-                    className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3"
+                    className="w-full sm:w-2/3 md:!w-1/2 lg:!w-1/3"
                   >
                     <div className="pricing-box">
                       <div className="w-2/5 mx-auto text-center relative">

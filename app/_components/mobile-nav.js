@@ -11,6 +11,7 @@ import { menuItems } from "./main-nav";
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
+  const router = useRouter();
 
   const onOpenChange = React.useCallback((open) => {
     setOpen(open);
@@ -34,6 +35,11 @@ export function MobileNav() {
                 <Link
                   className="font-medium text-primary hover:bg-accent-hover/80 p-2 rounded-md hover:text-white cursor-pointer"
                   href={item.href}
+                  onClick={() => {
+                    router.push(item.href.toString());
+                    // onOpenChange?.(!open);
+                    setOpen(false);
+                  }}
                 >
                   {item.label}
                 </Link>
@@ -42,13 +48,17 @@ export function MobileNav() {
                     <React.Fragment key={index}>
                       {!item.disabled &&
                         (item.href ? (
-                          <MobileLink
+                          <Link
                             href={item.href}
-                            onOpenChange={setOpen}
-                            className="text-primary/85 "
+                            onClick={() => {
+                              router.push(item.href.toString());
+                              // onOpenChange?.(!open);
+                              setOpen(false);
+                            }}
+                            className={cn("text-base")}
                           >
                             {item.title}
-                          </MobileLink>
+                          </Link>
                         ) : (
                           item.title
                         ))}
@@ -60,22 +70,5 @@ export function MobileNav() {
         </div>
       </DrawerContent>
     </Drawer>
-  );
-}
-
-function MobileLink({ href, onOpenChange, className, children, ...props }) {
-  const router = useRouter();
-  return (
-    <Link
-      href={href}
-      onClick={() => {
-        router.push(href.toString());
-        onOpenChange?.(false);
-      }}
-      className={cn("text-base", className)}
-      {...props}
-    >
-      {children}
-    </Link>
   );
 }
