@@ -1,4 +1,3 @@
-import "@/app/_styles/globals.css";
 import "@/public/assets/css/animate.css";
 import "@/public/assets/css/tailwind.css";
 import "lineicons/web-font/lineicons.css";
@@ -10,7 +9,7 @@ import "aos/dist/aos.css";
 import Footer from "./_components/Footer";
 import { Inter, Sora } from "next/font/google";
 import { SiteHeader } from "./_components/site-header";
-
+import "./globals.css";
 // Example of using a Google Font
 // const inter = Inter({ subsets: ["latin"], weight: "400" });
 const sora = Sora({ subsets: ["latin"] });

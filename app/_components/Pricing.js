@@ -41,7 +41,7 @@ async function Pricing() {
                   key={hebergement.id}
                   className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3"
                 >
-                  <div className="pricing-box !rounded-[20px]">
+                  <div className=" relative pricing-box !rounded-[20px]">
                     <div className="w-2/5 mx-auto text-center relative">
                       <Image
                         src={STRAPI_URL + imageUrl}
@@ -61,7 +61,10 @@ async function Pricing() {
                         {hebergement.attributes.description}
                       </p>
                     </div>
-                    <a href="#" className="btn">
+                    <a
+                      href="#"
+                      className="relative btn !w-full h-full text-normal block text-center"
+                    >
                       {hebergement.attributes.actionLabel}
                     </a>
                   </div>

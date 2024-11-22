@@ -63,7 +63,7 @@ p {
   @apply mx-auto px-5;
 }
 .btn {
-  @apply text-white bg-primary px-10 py-3 rounded-md duration-300;
+  @apply !text-white !bg-primary !px-10 !py-3 !rounded-md !duration-300;
 }
 .btn:hover {
   @apply bg-accent-hover;
