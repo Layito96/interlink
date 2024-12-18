@@ -50,7 +50,7 @@ export default async function Page({ params }) {
                   {product.Description.slice(65, 199)}
                 </div>
               </div>
-              <a href="#contact" className="button btn w-button">
+              <a href="/contact" className="button btn w-button">
                 Contacter Nous
               </a>
             </div>
