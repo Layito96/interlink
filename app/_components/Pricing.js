@@ -62,7 +62,7 @@ async function Pricing() {
                       </p>
                     </div>
                     <a
-                      href="#"
+                      href="/pricing"
                       className="relative btn !w-full h-full text-normal block text-center"
                     >
                       {hebergement.attributes.actionLabel}

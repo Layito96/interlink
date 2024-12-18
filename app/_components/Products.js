@@ -49,7 +49,7 @@ function Products() {
   const productData = Array.isArray(members.data) ? members.data : [];
   return (
     <section id="products" className="carousel-area bg-primary py-32">
-      <div className="watermark relative w-[300px] h-[300px]">
+      {/* <div className="watermark relative w-[300px] h-[300px]">
         <Image
           alt=""
           // loading="lazy"
@@ -60,7 +60,7 @@ function Products() {
           style={{ color: "transparent" }}
           priority
         />
-      </div>
+      </div> */}
       <div className="container">
         <div className="flex">
           <div className="w-full relative">

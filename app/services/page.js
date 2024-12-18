@@ -17,7 +17,7 @@ import { STRAPI_URL } from "../_lib/utils";
 
 export default function Page() {
   return (
-    <div className="container pt-40">
+    <div className="container pt-10">
       <Services />
 
       <Card

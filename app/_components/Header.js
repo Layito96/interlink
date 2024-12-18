@@ -40,11 +40,12 @@ function Header() {
             <h1
               data-aos="fade-right"
               data-aos-once="true"
-              className="lg:text-[2.5rem] md:text-[2.5rem] text-[1.5rem]  xl:text-4xl  font-bold leading-tight sm:pr-8 xl:pr-10"
+              className="lg:text-[2.5rem] md:text-[2.5rem] text-[1.5rem]  xl:text-4xl  font-normal leading-tight sm:pr-8 xl:pr-10"
             >
-              <span className="text-header-gradient">INTERLINK</span> votre
-              partenaire digital pour des solutions logicielles innovantes,
-              propulsées par l&apos;intelligence artificielle
+              {/* <span className="text-header-gradient"> */}
+              <span className="font-bold ">INTERLINK</span> votre partenaire
+              digital pour des solutions logicielles innovantes, propulsées par
+              l&apos;intelligence artificielle
             </h1>
 
             <p

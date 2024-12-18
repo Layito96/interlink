@@ -12,7 +12,7 @@ async function ArticleCard() {
           <div className="w-full px-4">
             <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
               <h1 className="title-font text-primary mb-4 text-xl font-bold leading-10 tracking-tight sm:text-5xl ">
-                Nos dérniers articles
+                Nos derniers articles
               </h1>
             </div>
           </div>

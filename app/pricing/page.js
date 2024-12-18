@@ -113,7 +113,7 @@ export default async function page() {
                           {hebergement.attributes.description}
                         </p>
                       </div>
-                      <a href="/valid-url" className="btn">
+                      <a href="/contact" className="btn">
                         {hebergement.attributes.actionLabel}
                       </a>
                     </div>
